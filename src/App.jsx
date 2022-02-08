@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Loader from './Loader';
+import Hero from './Hero';
 
 const LOADING_TIME_IN_MS = 2000;
 
@@ -13,9 +14,9 @@ function App() {
   }, []);
 
   return (
-    <div>
-      <Loader show={loading} />
-    </div>
+    <Loader show={loading}>
+      <Hero />
+    </Loader>
   );
 }
 

@@ -28,6 +28,7 @@ const Icon = styled.span`
   width: 90px;
   height: 90px;
   position: relative;
+  font-size: 2em;
   &:before {
     content: '';
     width: 100%;
@@ -53,18 +54,20 @@ const Icon = styled.span`
   }
 `;
 
-function Loader({ show }) {
-  return (
-    show && (
+function Loader({ show, children }) {
+  if (show) {
+    return (
       <Content>
         <Inner>
           <Icon>
-            <FontAwesomeIcon icon={solid('ring')} />
+            <FontAwesomeIcon icon={solid('gem')} />
           </Icon>
         </Inner>
       </Content>
-    )
-  );
+    );
+  }
+
+  return children;
 }
 
 export default Loader;
