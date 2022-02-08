@@ -1,16 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react';
+import Loader from './Loader';
 
-import Box from './components/Box';
+const LOADING_TIME_IN_MS = 2000;
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, LOADING_TIME_IN_MS);
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Box>content</Box>
-      </header>
+    <div>
+      <Loader show={loading} />
     </div>
   );
 }

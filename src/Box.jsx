@@ -6,7 +6,7 @@ function Box({ className, children }) {
 }
 
 const StyledBox = styled(Box)`
-  display: flex;
+  display: block;
 `;
 
 export default StyledBox;
