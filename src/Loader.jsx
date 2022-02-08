@@ -55,7 +55,7 @@ const Icon = styled.span`
 
 function Loader({ show }) {
   return (
-    !show && (
+    show && (
       <Content>
         <Inner>
           <Icon>
