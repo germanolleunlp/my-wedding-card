@@ -8,8 +8,7 @@ module.exports = {
   },
   env: {
     browser: true,
-    es2021: true,
-    'jest/globals': true
+    es2021: true
   },
   settings: {
     react: {
@@ -22,7 +21,7 @@ module.exports = {
     }
   },
   extends: ['plugin:react/recommended', 'airbnb', 'prettier'],
-  plugins: ['react', 'prettier', 'jest'],
+  plugins: ['react', 'prettier'],
   rules: {
     camelcase: 'off',
     'import/no-dynamic-require': 'off',
