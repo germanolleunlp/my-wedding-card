@@ -1,5 +1,7 @@
 const SIZES = {
-  menuDefault: '90px'
+  menuDefault: 90,
+  saveTheDateDefault: 350,
+  saveTheDateHalfDefault: 185
 };
 
 export default SIZES;

@@ -3,47 +3,8 @@ import styled from 'styled-components';
 import Colors from './Colors';
 import Sizes from './Sizes';
 import Images from './Images';
-import Keyframes from './Keyframes';
 import GettingMarried from './GettingMarried';
-
-const SaveTheDate = styled.div`
-  display: block;
-  bottom: -185px;
-  color: ${Colors.white};
-  opacity: 1;
-  z-index: 50;
-  width: 350px;
-  height: 350px;
-  border-radius: 50%;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  &:before {
-    content: '';
-    position: absolute;
-    background-color: ${Colors.greenAlphaLight};
-    border-radius: 50%;
-    z-index: -1;
-    width: 110%;
-    height: 110%;
-    left: -5%;
-    top: -5%;
-    animation: ${Keyframes.pulse} 1s infinite;
-    box-sizing: border-box;
-  }
-  &:after {
-    content: '';
-    position: absolute;
-    background-color: ${Colors.greenAlphaDark};
-    border-radius: 50%;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    box-sizing: border-box;
-  }
-`;
+import SaveTheDate from './SaveTheDate';
 
 const Title = styled.h4`
   font-size: 2.22222rem;
@@ -85,7 +46,7 @@ function Hero({ className }) {
 const StyledHero = styled(Hero)`
   display: block;
   position: relative;
-  height: calc(100vh - ${Sizes.menuDefault});
+  height: calc(100vh - ${Sizes.menuDefault}px);
   min-height: 700px;
   overflow: hidden;
   background-image: url(${Images.hero1});
