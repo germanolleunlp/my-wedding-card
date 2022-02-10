@@ -124,4 +124,4 @@ const StyledHero = styled(Hero)`
   }
 `;
 
-export default StyledHero;
+export default React.memo(StyledHero);

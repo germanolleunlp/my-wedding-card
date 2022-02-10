@@ -70,4 +70,4 @@ function Loader({ show, children }) {
   return children;
 }
 
-export default Loader;
+export default React.memo(Loader);

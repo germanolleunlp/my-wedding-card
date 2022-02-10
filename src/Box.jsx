@@ -9,4 +9,4 @@ const StyledBox = styled(Box)`
   display: block;
 `;
 
-export default StyledBox;
+export default React.memo(StyledBox);
