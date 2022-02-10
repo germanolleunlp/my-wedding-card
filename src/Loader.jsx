@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 import Box from './Box';
 import Colors from './Colors';
+import Keyframes from './Keyframes';
 
 const Content = styled(Box)`
   position: fixed;
@@ -20,7 +21,6 @@ const Inner = styled.div`
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
 `;
 
 const Icon = styled.span`
@@ -39,9 +39,7 @@ const Icon = styled.span`
     border: 5px solid ${Colors.lightgray};
     border-top: 5px solid ${Colors.green};
     border-radius: 50%;
-    -webkit-animation: rotating 1s linear infinite;
-    animation: rotating 1s linear infinite;
-    -webkit-box-sizing: border-box;
+    animation: ${Keyframes.rotating} 1s linear infinite;
     box-sizing: border-box;
   }
   & > svg {
@@ -50,7 +48,6 @@ const Icon = styled.span`
     top: 50%;
     color: ${Colors.green};
     transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
   }
 `;
 

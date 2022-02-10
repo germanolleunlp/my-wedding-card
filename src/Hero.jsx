@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import Colors from './Colors';
 import Sizes from './Sizes';
 import Images from './Images';
+import Keyframes from './Keyframes';
+import GettingMarried from './GettingMarried';
 
 const SaveTheDate = styled.div`
   display: block;
@@ -16,7 +18,6 @@ const SaveTheDate = styled.div`
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
   &:before {
     content: '';
     position: absolute;
@@ -27,9 +28,7 @@ const SaveTheDate = styled.div`
     height: 110%;
     left: -5%;
     top: -5%;
-    -webkit-animation: pulse 1s infinite;
-    animation: pulse 1s infinite;
-    -webkit-box-sizing: border-box;
+    animation: ${Keyframes.pulse} 1s infinite;
     box-sizing: border-box;
   }
   &:after {
@@ -42,7 +41,6 @@ const SaveTheDate = styled.div`
     height: 100%;
     left: 0;
     top: 0;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
   }
 `;
@@ -70,31 +68,11 @@ const Content = styled.div`
   display: table;
 `;
 
-const GettingMarried = styled.div`
-  display: table-cell;
-  vertical-align: middle;
-  h4 {
-    font-size: 1.44444rem;
-    color: ${Colors.white};
-    text-shadow: 1px 1px 2px ${Colors.shadow};
-    text-transform: uppercase;
-    margin: 0;
-    display: inline;
-    border-top: 1px solid ${Colors.white};
-    border-bottom: 1px solid ${Colors.white};
-    padding: 12px 20px;
-    position: relative;
-    letter-spacing: 2px;
-  }
-`;
-
 function Hero({ className }) {
   return (
     <section className={className}>
       <Content>
-        <GettingMarried>
-          <h4>Nos casamos</h4>
-        </GettingMarried>
+        <GettingMarried />
         <SaveTheDate>
           <Title>Agenda la fecha</Title>
           <Date>08 OCT 2022</Date>
