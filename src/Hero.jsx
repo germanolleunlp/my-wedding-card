@@ -109,7 +109,7 @@ const StyledHero = styled(Hero)`
   height: calc(100vh - ${Sizes.menuDefault});
   min-height: 700px;
   overflow: hidden;
-  background-image: url(http://irsfoundation.com/tf/templates/wedding/lovely-wedding/lovely-wedding/images/slider/slide-1.jpg);
+  background-image: url('assets/hero.jpeg');
   background-size: cover;
   background-position: center center;
   &:before {
