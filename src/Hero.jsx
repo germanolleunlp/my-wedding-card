@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Colors from './Colors';
 import Sizes from './Sizes';
+import Images from './Images';
 
 const SaveTheDate = styled.div`
   display: block;
@@ -109,7 +110,7 @@ const StyledHero = styled(Hero)`
   height: calc(100vh - ${Sizes.menuDefault});
   min-height: 700px;
   overflow: hidden;
-  background-image: url('assets/hero.jpeg');
+  background-image: url(${Images.hero1});
   background-size: cover;
   background-position: center center;
   &:before {
