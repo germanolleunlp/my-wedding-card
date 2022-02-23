@@ -1,34 +1,28 @@
 import { useState, useEffect } from 'react';
 import Images from './Images';
 
-const LOADING_TIME_IN_MS = 1500;
+const LOADING_TIME_IN_MS = 1000;
 
 const useImages = () => {
   const [loading, setLoading] = useState(true);
   const urls = Object.values(Images);
 
-  useEffect(() => {
-    let loaded = false;
-
+  useEffect(async () => {
     if (!urls.length) {
-      loaded = true;
+      setTimeout(() => setLoading(false), LOADING_TIME_IN_MS);
     } else {
       const promises = urls.map(
         url =>
-          new Promise((resolve, reject) => {
+          new Promise(resolve => {
             const img = new Image();
             img.onload = () => resolve(url);
-            img.onerror = error => reject(error);
             img.src = url;
           })
       );
 
-      Promise.all(promises).then((successUrls = []) => {
-        loaded = successUrls.length === urls.length;
-      });
+      await Promise.all(promises);
+      setTimeout(() => setLoading(false), LOADING_TIME_IN_MS);
     }
-
-    setTimeout(() => setLoading(!loaded), LOADING_TIME_IN_MS);
   }, []);
 
   return loading;
