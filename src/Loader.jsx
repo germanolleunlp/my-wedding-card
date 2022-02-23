@@ -37,7 +37,7 @@ const Icon = styled.span`
     left: 0;
     top: 0;
     border: 5px solid ${Colors.lightgray};
-    border-top: 5px solid ${Colors.green};
+    border-top: 5px solid ${Colors.primary};
     border-radius: 50%;
     animation: ${Keyframes.rotating} 1s linear infinite;
     box-sizing: border-box;
@@ -46,7 +46,7 @@ const Icon = styled.span`
     position: absolute;
     left: 50%;
     top: 50%;
-    color: ${Colors.green};
+    color: ${Colors.primary};
     transform: translate(-50%, -50%);
   }
 `;

@@ -20,7 +20,7 @@ const Content = styled.div`
   &:before {
     content: '';
     position: absolute;
-    background-color: ${Colors.greenAlphaLight};
+    background-color: ${Colors.primaryAlphaLight};
     border-radius: 50%;
     z-index: -1;
     width: 110%;
@@ -33,7 +33,7 @@ const Content = styled.div`
   &:after {
     content: '';
     position: absolute;
-    background-color: ${Colors.greenAlphaDark};
+    background-color: ${Colors.primaryAlphaDark};
     border-radius: 50%;
     z-index: -1;
     width: 100%;
