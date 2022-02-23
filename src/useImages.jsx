@@ -8,9 +8,7 @@ const useImages = () => {
   const urls = Object.values(Images);
 
   useEffect(async () => {
-    if (!urls.length) {
-      setTimeout(() => setLoading(false), LOADING_TIME_IN_MS);
-    } else {
+    if (urls.length) {
       const promises = urls.map(
         url =>
           new Promise(resolve => {
@@ -21,8 +19,9 @@ const useImages = () => {
       );
 
       await Promise.all(promises);
-      setTimeout(() => setLoading(false), LOADING_TIME_IN_MS);
     }
+
+    setTimeout(() => setLoading(false), LOADING_TIME_IN_MS);
   }, []);
 
   return loading;
