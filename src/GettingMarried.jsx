@@ -2,6 +2,11 @@ import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import Colors from './Colors';
 import Keyframes from './Keyframes';
+import {
+  smallBreakpoint,
+  mediumBreakpoint,
+  onlyLargeBreakpoint
+} from './Breakpoints';
 
 const Wrapper = styled.div`
   display: table-cell;
@@ -18,12 +23,15 @@ const Content = styled.div`
     position: relative;
     letter-spacing: 2px;
     display: inline;
-    font-size: 1.44444rem;
+    font-size: 1rem;
     text-transform: uppercase;
     margin: 0;
     border-top: 1px solid ${Colors.white};
     border-bottom: 1px solid ${Colors.white};
     padding: 12px 20px;
+    ${onlyLargeBreakpoint(`
+      font-size: 1.5rem;
+    `)}
   }
 `;
 
@@ -37,10 +45,19 @@ const StyledTitle = styled(Title)`
   position: relative;
   letter-spacing: 4px;
   display: block;
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 500;
   margin: 0 0 2rem;
   animation: ${Keyframes.slideInUp} 0.75s linear;
+  ${smallBreakpoint(`
+    font-size: 3rem;
+  `)}
+  ${mediumBreakpoint(`
+    font-size: 4rem;
+  `)}
+  ${onlyLargeBreakpoint(`
+    font-size: 5rem;
+  `)}
 `;
 
 function Letter({ className, value, delay = 0 }) {

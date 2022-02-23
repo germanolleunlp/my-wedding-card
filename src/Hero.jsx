@@ -5,18 +5,28 @@ import Sizes from './Sizes';
 import Images from './Images';
 import GettingMarried from './GettingMarried';
 import SaveTheDate from './SaveTheDate';
+import { smallBreakpoint, mediumBreakpoint } from './Breakpoints';
 
 const Title = styled.h4`
-  font-size: 2.22222rem;
+  font-size: 2rem;
   margin: 55px 0 0.2em;
   color: ${Colors.white};
   text-shadow: 1px 1px 2px ${Colors.shadow};
+  ${smallBreakpoint(`
+    font-size: 1.5rem;
+  `)}
+  ${mediumBreakpoint(`
+    font-size: 1.9rem;
+  `)}
 `;
 
 const Date = styled.span`
-  font-size: 1.11111rem;
+  font-size: 1rem;
   color: ${Colors.white};
   text-shadow: 1px 1px 2px ${Colors.shadow};
+  ${smallBreakpoint(`
+    font-size: 0.88rem;
+  `)}
 `;
 
 const Content = styled.div`
@@ -27,6 +37,9 @@ const Content = styled.div`
   top: 0;
   text-align: center;
   display: table;
+  a {
+    display: block;
+  }
 `;
 
 function Hero({ className }) {
@@ -35,8 +48,14 @@ function Hero({ className }) {
       <Content>
         <GettingMarried />
         <SaveTheDate>
-          <Title>Agenda la fecha</Title>
-          <Date>08 OCT 2022</Date>
+          <a
+            target="_blank"
+            href="https://calendar.google.com/event?action=TEMPLATE&amp;tmeid=NWozMG9vbjhpZWc3Mmw5YWs3N2RyNWg5Y2cgZ2VybWFub2xsZUBt&amp;tmsrc=germanolle%40gmail.com"
+            rel="noreferrer"
+          >
+            <Title>Agenda la fecha</Title>
+            <Date>08 OCT 2022</Date>
+          </a>
         </SaveTheDate>
       </Content>
     </section>

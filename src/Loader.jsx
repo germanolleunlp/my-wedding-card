@@ -28,7 +28,7 @@ const Icon = styled.span`
   width: 90px;
   height: 90px;
   position: relative;
-  font-size: 2em;
+  font-size: 2rem;
   &:before {
     content: '';
     width: 100%;

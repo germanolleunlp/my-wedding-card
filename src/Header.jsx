@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Colors from './Colors';
 import Sizes from './Sizes';
-import { onlyDesktopBreakpoint } from './Breakpoints';
+import { onlyLargeBreakpoint } from './Breakpoints';
 
 const ITEMS = [
   { href: '/home', text: 'Inicio' },
@@ -45,12 +45,10 @@ const StyledHeader = styled(Header)`
   }
   li > a {
     display: block;
-    font-size: 1rem;
     font-weight: 600;
     color: ${Colors.darkgray};
     padding: 35px 17px;
     text-transform: uppercase;
-    text-decoration: none;
     transition: all 0.5s;
     &:hover,
     &:focus {
@@ -65,9 +63,9 @@ const StyledHeader = styled(Header)`
     position: absolute;
     bottom: 2px;
   }
-  ${onlyDesktopBreakpoint(`
+  ${onlyLargeBreakpoint(`
     ul {
-      width: ${Sizes.screenDesktopMax}px;
+      width: ${Sizes.screenLargeMax}px;
     }
   `)}
 `;

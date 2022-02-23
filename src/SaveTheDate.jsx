@@ -1,17 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import Colors from './Colors';
 import Sizes from './Sizes';
 import Keyframes from './Keyframes';
+import { smallBreakpoint, mediumBreakpoint } from './Breakpoints';
 
 const Content = styled.div`
   display: block;
-  bottom: ${props => `${props.bottom}px`};
   color: ${Colors.white};
   opacity: 1;
   z-index: 50;
-  width: ${Sizes.saveTheDateDefault}px;
-  height: ${Sizes.saveTheDateDefault}px;
+  width: ${Sizes.saveTheDateLarge}px;
+  height: ${Sizes.saveTheDateLarge}px;
+  bottom: ${(Sizes.saveTheDateLarge / 2) * -1}px;
   border-radius: 50%;
   position: absolute;
   left: 50%;
@@ -42,20 +43,20 @@ const Content = styled.div`
     top: 0;
     box-sizing: border-box;
   }
+  ${smallBreakpoint(`
+    width: ${Sizes.saveTheDateSmall}px;
+    height: ${Sizes.saveTheDateSmall}px;
+    bottom: ${(Sizes.saveTheDateSmall / 2) * -1}px;
+  `)}
+  ${mediumBreakpoint(`
+    width: ${Sizes.saveTheDateMedium}px;
+    height: ${Sizes.saveTheDateMedium}px;
+    bottom: ${(Sizes.saveTheDateMedium / 2) * -1}px;
+  `)}
 `;
 
 function SaveTheDate({ className, children }) {
-  const [bottom, setBottom] = useState(Sizes.saveTheDateDefault * -1);
-
-  useEffect(() => {
-    setTimeout(() => setBottom(Sizes.saveTheDateHalfDefault * -1));
-  }, []);
-
-  return (
-    <Content className={className} bottom={bottom}>
-      {children}
-    </Content>
-  );
+  return <Content className={className}>{children}</Content>;
 }
 
 export default React.memo(SaveTheDate);

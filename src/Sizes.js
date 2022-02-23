@@ -1,8 +1,10 @@
 const SIZES = {
   menuDefault: 90,
-  saveTheDateDefault: 350,
-  saveTheDateHalfDefault: 185,
-  screenDesktopMax: 1170
+  saveTheDateLarge: 350,
+  saveTheDateMedium: 300,
+  saveTheDateSmall: 270,
+  screenLargeMax: 1170,
+  screenMediumMax: 768
 };
 
 export default SIZES;
