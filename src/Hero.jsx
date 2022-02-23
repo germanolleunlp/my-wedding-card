@@ -31,7 +31,7 @@ const Content = styled.div`
 
 function Hero({ className }) {
   return (
-    <section className={className}>
+    <section id="#/home" className={className}>
       <Content>
         <GettingMarried />
         <SaveTheDate>

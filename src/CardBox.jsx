@@ -6,8 +6,12 @@ import { onlyDesktopBreakpoint } from './Breakpoints';
 
 function CardBox({ className, img, title, description, inverted = false }) {
   const content = [
-    <div className="img" style={{ 'background-image': `url(${img})` }} />,
-    <div className="desc">
+    <div
+      key="img"
+      className="img"
+      style={{ backgroundImage: `url(${img})` }}
+    />,
+    <div key="desc" className="desc">
       <h3>{title}</h3>
       <p>{description}</p>
     </div>
