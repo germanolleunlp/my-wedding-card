@@ -9,7 +9,7 @@ import { smallBreakpoint, mediumBreakpoint } from './Breakpoints';
 
 const Title = styled.h4`
   font-size: 2rem;
-  margin: 55px 0 0.2em;
+  margin: 0;
   ${smallBreakpoint(`
     font-size: 1.5rem;
   `)}
@@ -58,7 +58,7 @@ function Hero({ className }) {
 const StyledHero = styled(Hero)`
   display: block;
   position: relative;
-  height: calc(100vh - ${Sizes.menuDefault}px);
+  height: calc(100vh - ${Sizes.menu}px);
   min-height: 700px;
   overflow: hidden;
   background-image: url(${Images.hero1});

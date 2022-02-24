@@ -8,7 +8,6 @@ import { smallBreakpoint, mediumBreakpoint } from './Breakpoints';
 const Content = styled.div`
   display: block;
   opacity: 1;
-  z-index: 50;
   width: ${Sizes.saveTheDateLarge}px;
   height: ${Sizes.saveTheDateLarge}px;
   bottom: ${(Sizes.saveTheDateLarge / 2) * -1}px;
@@ -21,6 +20,7 @@ const Content = styled.div`
     display: block;
     color: ${Colors.white};
     letter-spacing: 4px;
+    margin-top: 20%;
   }
   &:before {
     content: '';

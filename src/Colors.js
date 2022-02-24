@@ -9,6 +9,7 @@ const COLORS = {
   lightgray: '#f1f1f1',
   lightgrayAlpha: 'rgba(94, 154, 142, 0.05)',
   lightgray2: '#F9F9F7',
+  gray: '#cccccc',
   darkgray: '#413d3d',
   darkgray2: '#333333'
 };

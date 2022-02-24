@@ -1,5 +1,5 @@
 const SIZES = {
-  menuDefault: 90,
+  menu: 72,
   saveTheDateLarge: 350,
   saveTheDateMedium: 300,
   saveTheDateSmall: 270,

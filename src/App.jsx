@@ -5,6 +5,7 @@ import useImages from './useImages';
 import useFonts from './useFonts';
 import Fonts from './Fonts';
 import Colors from './Colors';
+import Sizes from './Sizes';
 import Loader from './Loader';
 import Hero from './Hero';
 import Welcome from './Welcome';
@@ -12,6 +13,7 @@ import Menu from './Menu';
 import GroomCard from './GroomCard';
 import BrideCard from './BrideCard';
 import Timeline from './Timeline';
+import Gifts from './Gifts';
 
 function App({ className }) {
   const loading = useImages();
@@ -21,24 +23,26 @@ function App({ className }) {
   useEffect(() => {
     if (!loading && location?.pathname && active) {
       const element = document.getElementById(`#${location.pathname}`);
-      element?.scrollIntoView({
-        block: 'start',
-        behavior: 'smooth'
-      });
+      if (element?.offsetTop) {
+        window.scroll({
+          top: element.offsetTop - Sizes.menu,
+          left: 0,
+          behavior: 'smooth'
+        });
+      }
     }
   }, [loading, location, active]);
 
   return (
     <div className={className}>
       <Loader show={loading || !active}>
-        <Hero />
         <Menu />
+        <Hero />
         <Welcome />
-        <section id="#/couple">
-          <GroomCard />
-          <BrideCard />
-        </section>
+        <GroomCard />
+        <BrideCard />
         <Timeline />
+        <Gifts />
       </Loader>
     </div>
   );
@@ -48,6 +52,7 @@ const StyledApp = styled(App)`
   display: block;
   font-family: ${Fonts.primary};
   background-color: ${Colors.lightgrayAlpha};
+  padding-top: ${Sizes.menu}px;
 `;
 
 export default StyledApp;

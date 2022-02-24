@@ -8,12 +8,9 @@ import { largeBreakpoint } from './Breakpoints';
 
 const ITEMS = [
   { href: '/home', text: 'Inicio' },
-  { href: '/couple', text: 'Pareja' },
-  { href: '/story', text: 'Historia' },
-  { href: '/events', text: 'Eventos' },
-  { href: '/people', text: 'Gente' },
-  { href: '/gallery', text: 'Galeria' },
-  { href: '/rsvp', text: 'Confirmacion' }
+  { href: '/us', text: 'Nosotros' },
+  { href: '/timeline', text: 'Eventos' },
+  { href: '/gifts', text: 'Gifts' }
 ];
 
 function Menu({ className }) {
@@ -31,7 +28,9 @@ function Menu({ className }) {
 }
 
 const StyledMenu = styled(Menu)`
-  position: sticky;
+  position: fixed;
+  width: 100%;
+  heigth: ${Sizes.menu}px;
   top: 0;
   background-color: ${Colors.black};
   z-index: 50;
