@@ -19,7 +19,7 @@ function NamesBox({ className }) {
         <h3>Bienvenidos</h3>
         <FontAwesomeIcon icon={solid('grip-lines-vertical')} />
         <p>
-          El 19.02.22 será un día muy importante para nosotros, celebrar tantos
+          El 08.10.22 será un día muy importante para nosotros, celebrar tantos
           <br />
           años de amor no sería lo mismo sin ustedes. Los esperamos para
           <br />
@@ -48,17 +48,17 @@ const StyledNamesBox = styled(NamesBox)`
     -moz-text-fill-color: transparent;
     -ms-background-clip: text;
     -ms-text-fill-color: transparent;
-    font-size: 300px;
     font-weight: bold;
-    line-height: 270px;
     text-transform: uppercase;
+    font-size: 300px;
+    line-height: 290px;
     ${mediumBreakpoint(`
-      font-size: 250px;
-      line-height: 220px;
+      font-size: 220px;
+      line-height: 210px;
     `)}
     ${smallBreakpoint(`
-      font-size: 200px;
-      line-height: 170px;
+      font-size: 120px;
+      line-height: 110px;
     `)}
   }
   .welcome {

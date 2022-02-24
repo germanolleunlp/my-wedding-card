@@ -1,9 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter } from 'react-router-dom';
+import smoothscroll from 'smoothscroll-polyfill';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+// kick off the polyfill!
+smoothscroll.polyfill();
 
 ReactDOM.render(
   <React.StrictMode>

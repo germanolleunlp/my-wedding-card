@@ -24,7 +24,7 @@ function App({ className }) {
     if (!loading && location?.pathname && active) {
       const element = document.getElementById(`#${location.pathname}`);
       if (element?.offsetTop) {
-        window.scroll({
+        window.scrollTo({
           top: element.offsetTop - Sizes.menu,
           left: 0,
           behavior: 'smooth'
@@ -50,6 +50,7 @@ function App({ className }) {
 
 const StyledApp = styled(App)`
   display: block;
+  min-width: ${Sizes.screenSmallMin}px;
   font-family: ${Fonts.primary};
   background-color: ${Colors.lightgrayAlpha};
   padding-top: ${Sizes.menu}px;
