@@ -10,15 +10,11 @@ import { smallBreakpoint, mediumBreakpoint } from './Breakpoints';
 function NamesBox({ className }) {
   return (
     <section id="#/us" className={className}>
-      <div className="names">
-        <h2>
-          <span>
-            Caro &amp;
-            <br />
-            Ger
-          </span>
-        </h2>
-      </div>
+      <h2 className="names">
+        Caro &amp;
+        <br />
+        Ger
+      </h2>
       <div className="welcome">
         <h3>Bienvenidos</h3>
         <FontAwesomeIcon icon={solid('grip-lines-vertical')} />
@@ -38,33 +34,36 @@ const StyledNamesBox = styled(NamesBox)`
   background-color: ${Colors.white};
   padding: 20px 0;
   .names {
+    margin: 0;
+    text-align: center;
     background-image: url(${Images.hero1});
     background-size: cover;
-    background-position: center center;
+    background-position: center;
     background-attachment: fixed;
+    background-clip: text;
+    text-fill-color: transparent;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    h2 {
-      text-align: center;
-      margin 0;
-      span {
-        font-size: 300px;
-        font-weight: bold;
-        line-height: 270px;
-        text-transform: uppercase;
-        ${mediumBreakpoint(`
-          font-size: 250px;
-          line-height: 220px;
-        `)}
-        ${smallBreakpoint(`
-          font-size: 200px;
-          line-height: 170px;
-        `)}
-      }
-    }
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -ms-background-clip: text;
+    -ms-text-fill-color: transparent;
+    font-size: 300px;
+    font-weight: bold;
+    line-height: 270px;
+    text-transform: uppercase;
+    ${mediumBreakpoint(`
+      font-size: 250px;
+      line-height: 220px;
+    `)}
+    ${smallBreakpoint(`
+      font-size: 200px;
+      line-height: 170px;
+    `)}
   }
   .welcome {
     text-align: center;
+    margin 0 1rem;
     h3 {
       font-family: ${Fonts.subtitle};
       font-size: 1.2rem;
