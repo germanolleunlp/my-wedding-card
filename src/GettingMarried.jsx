@@ -19,9 +19,7 @@ const Content = styled.div`
   transition: visibility;
   h4 {
     color: ${Colors.white};
-    text-shadow: 1px 1px 2px ${Colors.shadow};
     position: relative;
-    letter-spacing: 2px;
     display: inline;
     font-size: 1rem;
     text-transform: uppercase;
@@ -41,9 +39,7 @@ function Title({ className }) {
 
 const StyledTitle = styled(Title)`
   color: ${Colors.white};
-  text-shadow: 1px 1px 2px ${Colors.shadow};
   position: relative;
-  letter-spacing: 4px;
   display: block;
   font-size: 4rem;
   font-weight: 500;

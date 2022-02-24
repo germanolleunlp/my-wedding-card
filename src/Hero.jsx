@@ -10,8 +10,6 @@ import { smallBreakpoint, mediumBreakpoint } from './Breakpoints';
 const Title = styled.h4`
   font-size: 2rem;
   margin: 55px 0 0.2em;
-  color: ${Colors.white};
-  text-shadow: 1px 1px 2px ${Colors.shadow};
   ${smallBreakpoint(`
     font-size: 1.5rem;
   `)}
@@ -22,8 +20,6 @@ const Title = styled.h4`
 
 const Date = styled.span`
   font-size: 1rem;
-  color: ${Colors.white};
-  text-shadow: 1px 1px 2px ${Colors.shadow};
   ${smallBreakpoint(`
     font-size: 0.88rem;
   `)}
@@ -37,9 +33,6 @@ const Content = styled.div`
   top: 0;
   text-align: center;
   display: table;
-  a {
-    display: block;
-  }
 `;
 
 function Hero({ className }) {

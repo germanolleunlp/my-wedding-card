@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Colors from './Colors';
 import Sizes from './Sizes';
+import Fonts from './Fonts';
 import { onlyLargeBreakpoint } from './Breakpoints';
 
 const ITEMS = [
@@ -32,9 +33,7 @@ function Header({ className }) {
 const StyledHeader = styled(Header)`
   position: sticky;
   top: 0;
-  background-color: ${Colors.white};
-  margin-bottom: 20px;
-  border-bottom: 1px solid ${Colors.lightgray};
+  background-color: ${Colors.black};
   ul {
     display: flex;
     justify-content: space-around;
@@ -46,22 +45,18 @@ const StyledHeader = styled(Header)`
   li > a {
     display: block;
     font-weight: 600;
-    color: ${Colors.darkgray};
-    padding: 35px 17px;
+    font-family: ${Fonts.secondary};
+    letter-spacing: 1.5px;
+    color: ${Colors.white};
+    padding: 15px 17px;
+    margin: 10px 0;
+    border-bottom: 3px solid transparent;
     text-transform: uppercase;
     transition: all 0.5s;
     &:hover,
     &:focus {
-      color: ${Colors.primary};
+      border-bottom-color: ${Colors.white};
     }
-  }
-  &:after {
-    content: '';
-    width: 100%;
-    height: 1px;
-    background: ${Colors.lightgray};
-    position: absolute;
-    bottom: 2px;
   }
   ${onlyLargeBreakpoint(`
     ul {

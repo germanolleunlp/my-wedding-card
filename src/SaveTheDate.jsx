@@ -7,7 +7,6 @@ import { smallBreakpoint, mediumBreakpoint } from './Breakpoints';
 
 const Content = styled.div`
   display: block;
-  color: ${Colors.white};
   opacity: 1;
   z-index: 50;
   width: ${Sizes.saveTheDateLarge}px;
@@ -18,10 +17,15 @@ const Content = styled.div`
   left: 50%;
   transform: translateX(-50%);
   transition: 1s 2.3s ease-in-out;
+  a {
+    display: block;
+    color: ${Colors.white};
+    letter-spacing: 4px;
+  }
   &:before {
     content: '';
     position: absolute;
-    background-color: ${Colors.primaryAlphaLight};
+    background-color: ${Colors.blackAlphaLight};
     border-radius: 50%;
     z-index: -1;
     width: 110%;
@@ -34,7 +38,7 @@ const Content = styled.div`
   &:after {
     content: '';
     position: absolute;
-    background-color: ${Colors.primaryAlphaDark};
+    background-color: ${Colors.blackAlphaDark};
     border-radius: 50%;
     z-index: -1;
     width: 100%;

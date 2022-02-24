@@ -37,7 +37,6 @@ const StyledCardBox = styled(CardBox)`
   }
   .desc {
     padding: 50px;
-    background-color: ${Colors.lightgrayAlpha};
     p {
       color: ${Colors.darkgray};
       line-height: 1.8em;
