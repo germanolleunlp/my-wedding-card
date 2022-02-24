@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Colors from './Colors';
 import Sizes from './Sizes';
 import Fonts from './Fonts';
-import { onlyLargeBreakpoint } from './Breakpoints';
+import { largeBreakpoint } from './Breakpoints';
 
 const ITEMS = [
   { href: '/home', text: 'Inicio' },
@@ -16,7 +16,7 @@ const ITEMS = [
   { href: '/rsvp', text: 'Confirmacion' }
 ];
 
-function Header({ className }) {
+function Menu({ className }) {
   return (
     <header className={className}>
       <ul>
@@ -30,10 +30,11 @@ function Header({ className }) {
   );
 }
 
-const StyledHeader = styled(Header)`
+const StyledMenu = styled(Menu)`
   position: sticky;
   top: 0;
   background-color: ${Colors.black};
+  z-index: 50;
   ul {
     display: flex;
     justify-content: space-around;
@@ -58,11 +59,11 @@ const StyledHeader = styled(Header)`
       border-bottom-color: ${Colors.white};
     }
   }
-  ${onlyLargeBreakpoint(`
+  ${largeBreakpoint(`
     ul {
       width: ${Sizes.screenLargeMax}px;
     }
   `)}
 `;
 
-export default React.memo(StyledHeader);
+export default React.memo(StyledMenu);

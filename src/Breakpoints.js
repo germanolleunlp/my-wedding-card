@@ -14,7 +14,13 @@ export const mediumBreakpoint = styles => css`
   }
 `;
 
-export const onlyLargeBreakpoint = styles => css`
+export const smallAndMediumBreakpoint = styles => css`
+  @media (max-width: ${Sizes.screenLargeMax}px) {
+    ${styles}
+  }
+`;
+
+export const largeBreakpoint = styles => css`
   @media (min-width: ${Sizes.screenLargeMax + 1}px) {
     ${styles}
   }

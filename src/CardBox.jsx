@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Colors from './Colors';
 import Sizes from './Sizes';
-import { onlyLargeBreakpoint } from './Breakpoints';
+import { largeBreakpoint } from './Breakpoints';
 
 function CardBox({ className, img, title, description, inverted = false }) {
   const content = [
@@ -42,7 +42,7 @@ const StyledCardBox = styled(CardBox)`
       line-height: 1.8em;
     }
   }
-  ${onlyLargeBreakpoint(`
+  ${largeBreakpoint(`
     flex-direction: row;
     width: ${Sizes.screenLargeMax}px;
     margin: 0 auto;

@@ -5,7 +5,7 @@ import Keyframes from './Keyframes';
 import {
   smallBreakpoint,
   mediumBreakpoint,
-  onlyLargeBreakpoint
+  largeBreakpoint
 } from './Breakpoints';
 
 const Wrapper = styled.div`
@@ -27,7 +27,7 @@ const Content = styled.div`
     border-top: 1px solid ${Colors.white};
     border-bottom: 1px solid ${Colors.white};
     padding: 12px 20px;
-    ${onlyLargeBreakpoint(`
+    ${largeBreakpoint(`
       font-size: 1.5rem;
     `)}
   }
@@ -51,7 +51,7 @@ const StyledTitle = styled(Title)`
   ${mediumBreakpoint(`
     font-size: 4rem;
   `)}
-  ${onlyLargeBreakpoint(`
+  ${largeBreakpoint(`
     font-size: 5rem;
   `)}
 `;

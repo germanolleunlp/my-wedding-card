@@ -3,14 +3,15 @@ import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 import useImages from './useImages';
 import useFonts from './useFonts';
+import Fonts from './Fonts';
+import Colors from './Colors';
 import Loader from './Loader';
 import Hero from './Hero';
 import Welcome from './Welcome';
-import Header from './Header';
+import Menu from './Menu';
 import GroomCard from './GroomCard';
 import BrideCard from './BrideCard';
-import Fonts from './Fonts';
-import Colors from './Colors';
+import Timeline from './Timeline';
 
 function App({ className }) {
   const loading = useImages();
@@ -31,12 +32,13 @@ function App({ className }) {
     <div className={className}>
       <Loader show={loading || !active}>
         <Hero />
-        <Header />
+        <Menu />
         <Welcome />
         <section id="#/couple">
           <GroomCard />
           <BrideCard />
         </section>
+        <Timeline />
       </Loader>
     </div>
   );
