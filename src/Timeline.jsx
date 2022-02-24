@@ -80,31 +80,45 @@ function BookmarkIcon() {
 
 function TimelineContent({ className }) {
   return (
-    <VerticalTimeline
-      className={`${className} timeline-root`}
-      lineColor={Colors.black}
-    >
-      {ITEMS.map(item => (
-        <VerticalTimelineElement
-          key={item.id}
-          contentStyle={CONTENT_STYLE}
-          contentArrowStyle={CONTENT_ARROW_STYLE}
-          iconClassName="timeline-element-icon"
-          date={item.date}
-          iconStyle={ICON_STYLE}
-          icon={<BookmarkIcon />}
-        >
-          {item.content}
-        </VerticalTimelineElement>
-      ))}
-    </VerticalTimeline>
+    <div className={className}>
+      <div className="timeline-line" />
+      <VerticalTimeline className="timeline-root" lineColor={Colors.black}>
+        {ITEMS.map(item => (
+          <VerticalTimelineElement
+            key={item.id}
+            contentStyle={CONTENT_STYLE}
+            contentArrowStyle={CONTENT_ARROW_STYLE}
+            iconClassName="timeline-element-icon"
+            date={item.date}
+            iconStyle={ICON_STYLE}
+            icon={<BookmarkIcon />}
+          >
+            {item.content}
+          </VerticalTimelineElement>
+        ))}
+      </VerticalTimeline>
+    </div>
   );
 }
 
 const StyledTimelineContent = styled(TimelineContent)`
-  &::after {
+  position: relative;
+  .timeline-line {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 18px;
+    width: 4px;
+    z-index: 30;
+    background: #000000;
     height: ${props => `${props.completed}%`};
   }
+  ${largeBreakpoint(`
+    .timeline-line {
+      left: 50%;
+      margin-left: -2px;
+    }
+  `)}
 `;
 
 function Timeline({ className }) {
@@ -121,7 +135,7 @@ function Timeline({ className }) {
         const percent = offsetHeight > 0 ? (diff * 100) / offsetHeight : 0;
 
         if (percent >= MIN_SCROLLED_PERCENT) {
-          setCompleted(Math.min(percent - MIN_SCROLLED_PERCENT + 10, 100));
+          setCompleted(Math.min(percent - MIN_SCROLLED_PERCENT, 100));
         }
       }
     }
@@ -140,31 +154,19 @@ function Timeline({ className }) {
 }
 
 const StyledTimeline = styled(Timeline)`
-  margin: 25px 0;
+  margin: 25px 1rem;
+  .timeline-root {
+    width: 100%;
+  };
   .timeline-root::before {
     background: ${Colors.gray}
-  }
-  .timeline-root::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 18px;
-    width: 4px;
-    z-index: 30;
-    background: ${Colors.black}
-  }
+  };
   ${smallAndMediumBreakpoint(`
     .timeline-element-icon svg {
       width: 16px;
       height: 16px;
       margin-left: -8px;
       margin-top: -8px;
-    }
-  `)}
-  ${largeBreakpoint(`
-    .timeline-root::after {
-      left: 50%;
-      margin-left: -2px;
     }
   `)}
   }
