@@ -43,7 +43,7 @@ function Hero({ className }) {
         <SaveTheDate>
           <a
             target="_blank"
-            href="https://calendar.google.com/event?action=TEMPLATE&amp;tmeid=NWozMG9vbjhpZWc3Mmw5YWs3N2RyNWg5Y2cgZ2VybWFub2xsZUBt&amp;tmsrc=germanolle%40gmail.com"
+            href="https://calendar.google.com/event?action=TEMPLATE&amp;tmeid=M2pxbzB0c2hiODM4MDA2azZzaThnMHRrb2ggMnZqam5wY3RwZmxqdnV2cXZvaGhmdWxsOWNAZw&amp;tmsrc=2vjjnpctpfljvuvqvohhfull9c%40group.calendar.google.com"
             rel="noreferrer"
           >
             <Title>Agenda la fecha</Title>
