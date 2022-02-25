@@ -5,19 +5,13 @@ import Colors from './Colors';
 import Sizes from './Sizes';
 import Fonts from './Fonts';
 import { largeBreakpoint } from './Breakpoints';
-
-const ITEMS = [
-  { href: '/home', text: 'Inicio' },
-  { href: '/us', text: 'Nosotros' },
-  { href: '/timeline', text: 'Eventos' },
-  { href: '/gifts', text: 'Gifts' }
-];
+import MenuItems from './MenuItems';
 
 function Menu({ className }) {
   return (
     <header className={className}>
       <ul>
-        {ITEMS.map(item => (
+        {MenuItems.map(item => (
           <li key={item.href}>
             <Link to={item.href}>{item.text}</Link>
           </li>
