@@ -61,7 +61,7 @@ const StyledHero = styled(Hero)`
   height: calc(100vh - ${Sizes.menu}px);
   min-height: 700px;
   overflow: hidden;
-  background-image: url(${Images.hero1});
+  background-image: url(${Images.photo1});
   background-size: cover;
   background-position: center center;
   &:before {
