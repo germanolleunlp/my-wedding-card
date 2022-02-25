@@ -79,6 +79,7 @@ function PasswordForm({ className, socket }) {
 const StyledPasswordForm = styled(PasswordForm)`
   width: 100%;
   text-align: center;
+  margin: 0 5rem;
   .field {
     margin-bottom: 2rem;
     input,
