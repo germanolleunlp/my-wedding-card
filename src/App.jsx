@@ -16,6 +16,7 @@ import GroomCard from './GroomCard';
 import BrideCard from './BrideCard';
 import Timeline from './Timeline';
 import Gifts from './Gifts';
+import InstagramFeed from './InstagramFeed';
 
 function App({ className }) {
   const loading = useImages();
@@ -48,6 +49,7 @@ function App({ className }) {
         <BrideCard />
         <Timeline />
         <Gifts />
+        <InstagramFeed />
       </Loader>
     </div>
   );
