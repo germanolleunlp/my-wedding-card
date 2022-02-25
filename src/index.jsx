@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { HashRouter } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import smoothscroll from 'smoothscroll-polyfill';
 import './index.css';
 import App from './App';
+import GameBox from './GameBox';
 import reportWebVitals from './reportWebVitals';
 
 // kick off the polyfill!
@@ -12,7 +13,10 @@ smoothscroll.polyfill();
 ReactDOM.render(
   <React.StrictMode>
     <HashRouter>
-      <App />
+      <Routes>
+        <Route exact path="/game" element={<GameBox />} />
+        <Route path="*" element={<App />} />
+      </Routes>
     </HashRouter>
   </React.StrictMode>,
   document.getElementById('root')

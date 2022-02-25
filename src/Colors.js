@@ -11,7 +11,8 @@ const COLORS = {
   lightgray2: '#F9F9F7',
   gray: '#cccccc',
   darkgray: '#413d3d',
-  darkgray2: '#333333'
+  darkgray2: '#333333',
+  accepted: 'palegreen'
 };
 
 export default COLORS;
