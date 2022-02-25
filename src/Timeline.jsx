@@ -89,6 +89,7 @@ function TimelineContent({ className }) {
             contentStyle={CONTENT_STYLE}
             contentArrowStyle={CONTENT_ARROW_STYLE}
             iconClassName="timeline-element-icon"
+            dateClassName="timeline-element-date"
             date={item.date}
             iconStyle={ICON_STYLE}
             icon={<BookmarkIcon />}
@@ -161,6 +162,9 @@ const StyledTimeline = styled(Timeline)`
   .timeline-root::before {
     background: ${Colors.gray}
   };
+  .timeline-element-date {
+    color: ${Colors.black}
+  }
   ${smallAndMediumBreakpoint(`
     .timeline-element-icon svg {
       width: 16px;
