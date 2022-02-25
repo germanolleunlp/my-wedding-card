@@ -24,7 +24,7 @@ const StyledGifts = styled(Gifts)`
   justify-content: center;
   text-align: center;
   min-height: 420px;
-  background-image: url(${Images.hero1});
+  background-image: url(${Images.terraza2});
   background-size: cover;
   background-position: center center;
   color: ${Colors.white};
