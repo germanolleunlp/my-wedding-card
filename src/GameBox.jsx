@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import io from 'socket.io-client';
 import Loader from './Loader';
 import Passwords from './Passwords';
+import Colors from './Colors';
 
 function GameBox({ className }) {
   const [socket, setSocket] = useState(null);
@@ -16,7 +17,6 @@ function GameBox({ className }) {
   return (
     <div className={className}>
       <Loader show={!socket}>
-        <h1>Game Ready</h1>
         <Passwords socket={socket} />
       </Loader>
     </div>
@@ -29,6 +29,7 @@ const StyledGameBox = styled(GameBox)`
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: ${Colors.black};
 `;
 
 export default React.memo(StyledGameBox);

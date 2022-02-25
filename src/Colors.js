@@ -12,7 +12,9 @@ const COLORS = {
   gray: '#cccccc',
   darkgray: '#413d3d',
   darkgray2: '#333333',
-  accepted: 'palegreen'
+  neonBlue: 'rgba(88, 103, 221, 1)',
+  neonLightBlue: 'rgba(0, 181, 173, 1)',
+  neonLightGreen: 'rgba(37, 162, 51, 1)'
 };
 
 export default COLORS;
