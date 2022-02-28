@@ -36,7 +36,7 @@ const StyledNamesBox = styled(NamesBox)`
   .names {
     margin: 0;
     text-align: center;
-    background-image: url(${Images.bariloche3});
+    background-image: url(${Images.bariloche1});
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;

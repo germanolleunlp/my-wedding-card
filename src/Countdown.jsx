@@ -44,7 +44,7 @@ const StyledCountdown = styled(Countdown)`
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 400px;
+  min-height: 400px;
   background-image: url(${Images.terraza1});
   background-attachment: fixed;
   background-position: top left;
@@ -62,7 +62,7 @@ const StyledCountdown = styled(Countdown)`
   h3 {
     color: ${Colors.white};
     font-size: 3.5rem;
-    margin: 0;
+    margin: 1rem;
     z-index: 2;
   }
   .timer {
