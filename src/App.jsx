@@ -17,6 +17,7 @@ import BrideCard from './BrideCard';
 import Timeline from './Timeline';
 import Gifts from './Gifts';
 import InstagramFeed from './InstagramFeed';
+import Countdown from './Countdown';
 
 function App({ className }) {
   const loading = useImages();
@@ -47,6 +48,7 @@ function App({ className }) {
         <Welcome />
         <GroomCard />
         <BrideCard />
+        <Countdown />
         <Timeline />
         <Gifts />
         <InstagramFeed />

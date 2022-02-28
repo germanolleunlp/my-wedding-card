@@ -28,7 +28,7 @@ const StyledCardBox = styled(CardBox)`
   display: flex;
   flex-direction: column;
   color: ${Colors.darkgray2};
-  margin: 0 auto 25px auto;
+  margin: 0 auto;
   padding: 0 15px;
   .img {
     height: 455px;

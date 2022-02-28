@@ -24,7 +24,7 @@ function Menu({ className }) {
 const StyledMenu = styled(Menu)`
   position: fixed;
   width: 100%;
-  heigth: ${Sizes.menu}px;
+  height: ${Sizes.menu}px;
   top: 0;
   background-color: ${Colors.black};
   z-index: 50;
