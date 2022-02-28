@@ -6,7 +6,7 @@ import Fonts from './Fonts';
 import useCountdown from './useCountdown';
 
 function Countdown({ className }) {
-  const countdown = useCountdown('10-08-2022');
+  const countdown = useCountdown('2022-10-08');
 
   return (
     <section id="#/countdown" className={className}>
@@ -36,6 +36,7 @@ function Countdown({ className }) {
 }
 
 const StyledCountdown = styled(Countdown)`
+  text-align: center;
   margin: 2rem 0;
   position: relative;
   display: inline-flex;
