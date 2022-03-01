@@ -7,11 +7,19 @@ import Colors from './Colors';
 import Sizes from './Sizes';
 
 function MobileMenu({ className }) {
+  const closeMenu = () => {
+    const overlay = document.getElementsByClassName('bm-menu-overlay')[0];
+    overlay?.click();
+  };
+
   return (
     <div className={className}>
-      <Menu burgerButtonClassName="bm-menu-btn">
+      <Menu
+        burgerButtonClassName="bm-menu-btn"
+        overlayClassName="bm-menu-overlay"
+      >
         {MenuItems.map(item => (
-          <Link key={item.href} to={item.href}>
+          <Link key={item.href} to={item.href} onClick={closeMenu}>
             {item.text}
           </Link>
         ))}
