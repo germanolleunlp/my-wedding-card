@@ -155,7 +155,7 @@ function Timeline({ className }) {
 }
 
 const StyledTimeline = styled(Timeline)`
-  margin: 0 1rem;
+  margin: 1rem;
   .timeline-root {
     width: 100%;
   };
