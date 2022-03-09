@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { isMobile } from 'react-device-detect';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 import Colors from './Colors';
@@ -10,10 +11,13 @@ import { smallBreakpoint, mediumBreakpoint } from './Breakpoints';
 function NamesBox({ className }) {
   return (
     <section id="#/us" className={className}>
-      <h2 className="names">
-        Caro &amp;
+      <h2
+        className="names"
+        style={{ backgroundAttachment: isMobile ? 'scroll' : 'fixed' }}
+      >
+        Caro
         <br />
-        Ger
+        &amp; Ger
       </h2>
       <div className="welcome">
         <h3>Bienvenidos</h3>

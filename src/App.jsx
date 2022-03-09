@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 import useImages from './useImages';
 import useFonts from './useFonts';
-import useMobile from './useMobile';
+import useSize from './useSize';
 import Fonts from './Fonts';
 import Colors from './Colors';
 import Sizes from './Sizes';
@@ -24,13 +24,13 @@ function App({ className }) {
   const loading = useImages();
   const active = useFonts();
   const location = useLocation();
-  const isMobile = useMobile();
+  const isMediumSize = useSize(Sizes.screenMediumMax);
 
   useEffect(() => {
     if (!loading && location?.pathname && active) {
       const element = document.getElementById(`#${location.pathname}`);
       const offsetTop = element?.offsetTop || 0;
-      const top = offsetTop - (isMobile ? 0 : Sizes.menu);
+      const top = offsetTop - (isMediumSize ? 0 : Sizes.menu);
       window.scrollTo({
         top,
         left: 0,
@@ -39,12 +39,12 @@ function App({ className }) {
     }
   }, [loading, location, active]);
 
-  const paddingTop = isMobile ? 0 : Sizes.menu;
+  const paddingTop = isMediumSize ? 0 : Sizes.menu;
 
   return (
     <div className={className} style={{ paddingTop }}>
       <Loader show={loading || !active}>
-        {isMobile ? <MobileMenu /> : <Menu />}
+        {isMediumSize ? <MobileMenu /> : <Menu />}
         <Hero />
         <Welcome />
         <GroomCard />

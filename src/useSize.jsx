@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
-import Sizes from './Sizes';
 
-const useMobile = () => {
+const useSize = size => {
   const [windowDimension, setWindowDimension] = useState(null);
 
   useEffect(() => {
@@ -17,8 +16,8 @@ const useMobile = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const isMobile = windowDimension <= Sizes.screenMediumMax;
-  return isMobile;
+  const isSize = windowDimension <= size;
+  return isSize;
 };
 
-export default useMobile;
+export default useSize;

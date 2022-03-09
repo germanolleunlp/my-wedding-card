@@ -34,7 +34,7 @@ const Content = styled.div`
 `;
 
 function Title({ className }) {
-  return <h2 className={className}>Caro & Ger</h2>;
+  return <h2 className={className}>Caro &amp; Ger</h2>;
 }
 
 const StyledTitle = styled(Title)`
