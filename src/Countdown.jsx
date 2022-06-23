@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import Colors from './Colors';
 import Images from './Images';
 import Fonts from './Fonts';
 import useCountdown from './useCountdown';
@@ -57,16 +56,15 @@ const StyledCountdown = styled(Countdown)`
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: ${Colors.blackAlphaDark};
   }
   h3 {
-    color: ${Colors.white};
+    color: ${({ theme }) => theme.colors.textInverted};
     font-size: 3.5rem;
     margin: 1rem;
     z-index: 2;
   }
   .timer {
-    color: ${Colors.black};
+    color: ${({ theme }) => theme.colors.text};
     font-family: ${Fonts.primary};
     margin: 1rem 0;
     z-index: 2;
@@ -76,10 +74,10 @@ const StyledCountdown = styled(Countdown)`
       align-items: center;
       justify-content: center;
       margin: 5px;
-      background-color: ${Colors.lightgray2};
+      background-color: ${({ theme }) => theme.colors.backgroundOne};
       width: 125px;
       height: 100px;
-      border: 1px solid ${Colors.black};
+      border: 1px solid ${({ theme }) => theme.colors.text};
       border-radius: 4px;
       span {
         font-size: 3rem;

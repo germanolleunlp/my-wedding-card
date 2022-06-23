@@ -10,22 +10,7 @@ import { regular } from '@fortawesome/fontawesome-svg-core/import.macro';
 import Colors from './Colors';
 import { smallAndMediumBreakpoint, largeBreakpoint } from './Breakpoints';
 
-const CONTENT_STYLE = {
-  background: Colors.black,
-  color: Colors.white,
-  boxShadow: 'none'
-};
-
-const ICON_STYLE = {
-  background: Colors.black,
-  color: Colors.white,
-  boxShadow: 'none',
-  zIndex: 40
-};
-
-const CONTENT_ARROW_STYLE = { borderRight: `7px solid  ${Colors.black}` };
 const MIN_SCROLLED_PERCENT = 25;
-
 const ITEMS = [
   {
     id: 'church',
@@ -78,7 +63,24 @@ function BookmarkIcon() {
   return <FontAwesomeIcon icon={regular('bookmark')} />;
 }
 
-function TimelineContent({ className }) {
+function TimelineContent({ className, theme }) {
+  const contentStyle = {
+    background: theme.colors.backgroundOneInverted,
+    color: theme.colors.textInverted,
+    boxShadow: 'none'
+  };
+
+  const iconStyle = {
+    background: theme.colors.backgroundOneInverted,
+    color: theme.colors.textInverted,
+    boxShadow: 'none',
+    zIndex: 40
+  };
+
+  const contentArrowStyle = {
+    borderRight: `7px solid  ${theme.colors.backgroundOneInverted}`
+  };
+
   return (
     <div className={className}>
       <div className="timeline-line" />
@@ -86,12 +88,12 @@ function TimelineContent({ className }) {
         {ITEMS.map(item => (
           <VerticalTimelineElement
             key={item.id}
-            contentStyle={CONTENT_STYLE}
-            contentArrowStyle={CONTENT_ARROW_STYLE}
+            contentStyle={contentStyle}
+            contentArrowStyle={contentArrowStyle}
             iconClassName="timeline-element-icon"
             dateClassName="timeline-element-date"
             date={item.date}
-            iconStyle={ICON_STYLE}
+            iconStyle={iconStyle}
             icon={<BookmarkIcon />}
           >
             {item.content}
@@ -104,14 +106,16 @@ function TimelineContent({ className }) {
 
 const StyledTimelineContent = styled(TimelineContent)`
   position: relative;
+  background-color: ${({ theme }) => theme.colors.backgroundTwo};
+  padding: 16px;
   .timeline-line {
     content: '';
     position: absolute;
     top: 0;
-    left: 18px;
+    left: 34px;
     width: 4px;
     z-index: 30;
-    background: #000000;
+    background: ${({ theme }) => theme.colors.backgroundOneInverted};
     height: ${props => `${props.completed}%`};
   }
   ${largeBreakpoint(`
@@ -122,7 +126,7 @@ const StyledTimelineContent = styled(TimelineContent)`
   `)}
 `;
 
-function Timeline({ className }) {
+function Timeline({ className, theme }) {
   const [completed, setCompleted] = useState(0);
   const ref = useRef(null);
 
@@ -149,7 +153,7 @@ function Timeline({ className }) {
 
   return (
     <section id="#/timeline" className={className} ref={ref}>
-      <StyledTimelineContent completed={completed} />
+      <StyledTimelineContent completed={completed} theme={theme} />
     </section>
   );
 }
@@ -160,11 +164,14 @@ const StyledTimeline = styled(Timeline)`
     width: 100%;
   };
   .timeline-root::before {
-    background: ${Colors.gray}
+    background: ${({ theme }) => theme.colors.backgroundOne};
   };
   .timeline-element-date {
-    color: ${Colors.black}
+    opacity: 1 !important;
+    color: inherit;
   }
+  ${({ theme }) =>
+    largeBreakpoint(`.timeline-element-date { color: ${theme.colors.text}; }`)}
   ${smallAndMediumBreakpoint(`
     .timeline-element-icon svg {
       width: 16px;

@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import Colors from './Colors';
 import Images from './Images';
 import Fonts from './Fonts';
 
@@ -27,7 +26,7 @@ const StyledGifts = styled(Gifts)`
   background-image: url(${Images.terraza2});
   background-size: cover;
   background-position: center center;
-  color: ${Colors.white};
+  color: ${({ theme }) => theme.colors.textInverted};
   h3 {
     font-family: ${Fonts.secondary};
     letter-spacing: 2px;

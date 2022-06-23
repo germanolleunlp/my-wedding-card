@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import Colors from './Colors';
 import Sizes from './Sizes';
 import Fonts from './Fonts';
 import { largeBreakpoint } from './Breakpoints';
@@ -26,7 +25,7 @@ const StyledMenu = styled(Menu)`
   width: 100%;
   height: ${Sizes.menu}px;
   top: 0;
-  background-color: ${Colors.black};
+  background-color: ${({ theme }) => theme.colors.backgroundOne};
   z-index: 50;
   ul {
     display: flex;
@@ -41,7 +40,7 @@ const StyledMenu = styled(Menu)`
     font-weight: 600;
     font-family: ${Fonts.secondary};
     letter-spacing: 1.5px;
-    color: ${Colors.white};
+    color: ${({ theme }) => theme.colors.text};
     padding: 15px 17px;
     margin: 10px 0;
     border-bottom: 3px solid transparent;
@@ -49,7 +48,7 @@ const StyledMenu = styled(Menu)`
     transition: all 0.5s;
     &:hover,
     &:focus {
-      border-bottom-color: ${Colors.white};
+      border-bottom-color: ${({ theme }) => theme.colors.text};
     }
   }
   ${largeBreakpoint(`

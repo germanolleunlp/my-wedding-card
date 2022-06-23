@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import Colors from './Colors';
 import Sizes from './Sizes';
 import { largeBreakpoint } from './Breakpoints';
 
@@ -27,7 +26,7 @@ function CardBox({ className, img, title, description, inverted = false }) {
 const StyledCardBox = styled(CardBox)`
   display: flex;
   flex-direction: column;
-  color: ${Colors.darkgray2};
+  color: ${({ theme }) => theme.colors.text};
   margin: 0 auto;
   padding: 0 15px;
   .img {
@@ -37,8 +36,9 @@ const StyledCardBox = styled(CardBox)`
   }
   .desc {
     padding: 50px;
+    background-color: ${({ theme }) => theme.colors.backgroundTwo};
     p {
-      color: ${Colors.darkgray};
+      color: ${({ theme }) => theme.colors.text};
       line-height: 1.8em;
     }
   }

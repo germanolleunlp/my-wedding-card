@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { isMobile } from 'react-device-detect';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
-import Colors from './Colors';
 import Images from './Images';
 import Fonts from './Fonts';
 import { smallBreakpoint, mediumBreakpoint } from './Breakpoints';
@@ -35,8 +34,9 @@ function NamesBox({ className }) {
 }
 
 const StyledNamesBox = styled(NamesBox)`
-  background-color: ${Colors.white};
+  background-color: ${({ theme }) => theme.colors.backgroundTwo};
   padding: 20px 0;
+  margin-bottom: 2rem;
   .names {
     margin: 0;
     text-align: center;
@@ -67,7 +67,8 @@ const StyledNamesBox = styled(NamesBox)`
   }
   .welcome {
     text-align: center;
-    margin 0 1rem;
+    color: ${({ theme }) => theme.colors.text};
+    margin: 0 1rem;
     h3 {
       font-family: ${Fonts.subtitle};
       font-size: 1.2rem;

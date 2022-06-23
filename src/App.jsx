@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import styled from 'styled-components';
+import styled, { ThemeProvider } from 'styled-components';
+import { light, dark } from './themes';
 import useImages from './useImages';
 import useFonts from './useFonts';
 import useSize from './useSize';
 import Fonts from './Fonts';
-import Colors from './Colors';
 import Sizes from './Sizes';
 import Loader from './Loader';
 import Hero from './Hero';
@@ -16,15 +16,16 @@ import GroomCard from './GroomCard';
 import BrideCard from './BrideCard';
 import Timeline from './Timeline';
 import Gifts from './Gifts';
-import InstagramFeed from './InstagramFeed';
 import Countdown from './Countdown';
 import DressCode from './DressCode';
+import ThemeButton from './ThemeButton';
 
 function App({ className }) {
   const loading = useImages();
   const active = useFonts();
   const location = useLocation();
   const isMediumSize = useSize(Sizes.screenMediumMax);
+  const [theme, setTheme] = useState(light);
 
   useEffect(() => {
     if (!loading && location?.pathname && active) {
@@ -41,21 +42,35 @@ function App({ className }) {
 
   const paddingTop = isMediumSize ? 0 : Sizes.menu;
 
+  const toggleTheme = () => {
+    if (theme.name === dark.name) {
+      setTheme(light);
+      return;
+    }
+
+    setTheme(dark);
+  };
+
   return (
-    <div className={className} style={{ paddingTop }}>
-      <Loader show={loading || !active}>
-        {isMediumSize ? <MobileMenu /> : <Menu />}
-        <Hero />
-        <Welcome />
-        <GroomCard />
-        <BrideCard />
-        <Countdown />
-        <DressCode />
-        <Timeline />
-        <Gifts />
-        <InstagramFeed />
-      </Loader>
-    </div>
+    <ThemeProvider theme={theme}>
+      <div
+        className={className}
+        style={{ paddingTop, backgroundColor: theme.colors.backgroundOne }}
+      >
+        <Loader show={loading || !active}>
+          {isMediumSize ? <MobileMenu /> : <Menu />}
+          <Hero />
+          <Welcome />
+          <GroomCard />
+          <BrideCard />
+          <Countdown />
+          <DressCode theme={theme} />
+          <Timeline theme={theme} />
+          <Gifts />
+          <ThemeButton theme={theme} onClick={toggleTheme} />
+        </Loader>
+      </div>
+    </ThemeProvider>
   );
 }
 
@@ -63,7 +78,6 @@ const StyledApp = styled(App)`
   display: block;
   min-width: ${Sizes.screenSmallMax}px;
   font-family: ${Fonts.primary};
-  background-color: ${Colors.lightgrayAlpha};
 `;
 
 export default StyledApp;

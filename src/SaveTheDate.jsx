@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import Colors from './Colors';
 import Sizes from './Sizes';
 import Keyframes from './Keyframes';
 import { smallBreakpoint, mediumBreakpoint } from './Breakpoints';
@@ -18,14 +17,15 @@ const Content = styled.div`
   transition: 1s 2.3s ease-in-out;
   a {
     display: block;
-    color: ${Colors.white};
+    height: 50%;
+    padding-top: 20%;
+    color: ${({ theme }) => theme.colors.text};
     letter-spacing: 4px;
-    margin-top: 20%;
   }
   &:before {
     content: '';
     position: absolute;
-    background-color: ${Colors.blackAlphaLight};
+    background-color: ${({ theme }) => theme.colors.backgroundAlphaOne};
     border-radius: 50%;
     z-index: -1;
     width: 110%;
@@ -38,7 +38,7 @@ const Content = styled.div`
   &:after {
     content: '';
     position: absolute;
-    background-color: ${Colors.blackAlphaDark};
+    background-color: ${({ theme }) => theme.colors.backgroundAlphaTwo};
     border-radius: 50%;
     z-index: -1;
     width: 100%;

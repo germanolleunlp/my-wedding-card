@@ -4,7 +4,6 @@ import { HashRouter, Routes, Route } from 'react-router-dom';
 import smoothscroll from 'smoothscroll-polyfill';
 import './index.css';
 import App from './App';
-import GameBox from './GameBox';
 import reportWebVitals from './reportWebVitals';
 
 // kick off the polyfill!
@@ -14,7 +13,6 @@ ReactDOM.render(
   <React.StrictMode>
     <HashRouter>
       <Routes>
-        <Route exact path="/game" element={<GameBox />} />
         <Route path="*" element={<App />} />
       </Routes>
     </HashRouter>

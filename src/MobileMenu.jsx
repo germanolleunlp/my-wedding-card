@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { slide as Menu } from 'react-burger-menu';
 import MenuItems from './MenuItems';
-import Colors from './Colors';
 import Sizes from './Sizes';
 
 function MobileMenu({ className }) {
@@ -42,24 +41,24 @@ const StyledMobileMenu = styled(MobileMenu)`
       left: -5px;
       height: ${Sizes.menu + 15}px;
       width: ${Sizes.menu + 15}px;
-      background: rgba(255, 255, 255, 0.4);
+      background: ${({ theme }) => theme.colors.backgroundAlphaTwo};
     }
   }
   .bm-burger-bars {
-    background: ${Colors.darkgray2};
+    background: ${({ theme }) => theme.colors.text};
   }
   .bm-menu-wrap {
-    background: ${Colors.gray};
+    background: ${({ theme }) => theme.colors.backgroundTwo};
   }
   .bm-item {
     padding: 1rem;
-    color: ${Colors.darkgray};
+    color: ${({ theme }) => theme.colors.text};
     border: none;
     outline: none;
     &:hover,
     &:focus {
-      color: ${Colors.lightgray2};
-      background: ${Colors.darkgray};
+      color: ${({ theme }) => theme.colors.textInverted};
+      background: ${({ theme }) => theme.colors.backgroundOneInverted};
     }
   }
 `;

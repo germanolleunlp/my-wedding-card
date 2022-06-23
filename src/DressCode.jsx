@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import Outfit from './Outfit';
 import Images from './Images';
-import Colors from './Colors';
 import Fonts from './Fonts';
 
 const OUTFITS = [
@@ -50,13 +49,13 @@ const OUTFITS = [
   }
 ];
 
-function DressCode({ className }) {
+function DressCode({ className, theme }) {
   return (
     <section id="#/dresscode" className={className}>
       <h3>Dress Code</h3>
       <div className="outfits">
         {OUTFITS.map(({ key, imgSrc, content }) => (
-          <Outfit key={key} alt={key} imgSrc={imgSrc}>
+          <Outfit key={key} alt={key} imgSrc={imgSrc} theme={theme}>
             {content}
           </Outfit>
         ))}
@@ -74,7 +73,7 @@ const StyledDressCode = styled(DressCode)`
   width: 100%;
   min-height: 350px;
   h3 {
-    color: ${Colors.black};
+    color: ${({ theme }) => theme.colors.text};
     font-family: ${Fonts.subtitle};
     font-size: 2rem;
     margin: 1rem;

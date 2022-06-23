@@ -5,7 +5,7 @@ import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 import ReactTooltip from 'react-tooltip';
 import Fonts from './Fonts';
 
-function Outfit({ className, imgSrc, alt, children }) {
+function Outfit({ className, imgSrc, alt, theme, children }) {
   return (
     <div className={className}>
       <img src={imgSrc} alt={alt} />
@@ -15,7 +15,7 @@ function Outfit({ className, imgSrc, alt, children }) {
         data-for={alt}
         data-tip
       />
-      <ReactTooltip id={alt} place="top" type="dark">
+      <ReactTooltip id={alt} place="top" type={theme.name}>
         <div className="outfit-content">{children}</div>
       </ReactTooltip>
     </div>
@@ -33,6 +33,7 @@ const StyledOutfit = styled(Outfit)`
     font-size: 25px;
     opacity: 0.5;
     transition: opacity 0.35s;
+    color: ${({ theme }) => theme.colors.text};
     &:hover,
     &:focus {
       opacity: 1;
