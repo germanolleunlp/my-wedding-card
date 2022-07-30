@@ -55,4 +55,14 @@ const slideInUp = keyframes`
   }
 `;
 
-export default { rotating, pulse, fadeIn, fadeInUp, slideInUp };
+const colorAnimation = keyframes`
+  0%    {color: var(--color-1)}
+  32%   {color: var(--color-1)}
+  33%   {color: var(--color-2)}
+  65%   {color: var(--color-2)}
+  66%   {color: var(--color-3)}
+  99%   {color: var(--color-3)}
+  100%  {color: var(--color-1)}
+`;
+
+export default { rotating, pulse, fadeIn, fadeInUp, slideInUp, colorAnimation };

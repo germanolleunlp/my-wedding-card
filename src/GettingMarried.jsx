@@ -34,7 +34,7 @@ const Content = styled.div`
 `;
 
 function Title({ className }) {
-  return <h2 className={className}>Caro &amp; Ger</h2>;
+  return <h2 className={className}>Llego la hora...</h2>;
 }
 
 const StyledTitle = styled(Title)`
@@ -88,7 +88,7 @@ function GettingMarried() {
       <Content visibility={visibility}>
         <StyledTitle />
         <h4>
-          {'Nos casamos'.split('').map((letter, index) => {
+          {'acompañanos a celebrar'.split('').map((letter, index) => {
             const key = `${letter}_${index}`;
             return (
               <StyledLetter

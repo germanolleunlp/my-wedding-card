@@ -1,53 +1,60 @@
 import React from 'react';
 import styled from 'styled-components';
-import Sizes from './Sizes';
 import { largeBreakpoint } from './Breakpoints';
+import Keyframes from './Keyframes';
 
-function CardBox({ className, img, title, description, inverted = false }) {
-  const content = [
-    <div
-      key="img"
-      className="img"
-      style={{ backgroundImage: `url(${img})` }}
-    />,
-    <div key="desc" className="desc">
-      <h3>{title}</h3>
-      <p>{description}</p>
-    </div>
-  ];
+function CardBox({ className, img, title = '', inverted = false }) {
+  const prefix = inverted ? 'inverted' : 'normal';
+  const words = title
+    .split(' ')
+    .map((word, index) => (
+      <span className={`${prefix}-word-${index + 1}`}>{word}</span>
+    ));
 
   return (
-    <div className={className}>
-      {((inverted && content.reverse()) || content).map(item => item)}
+    <div className={className} style={{ backgroundImage: `url(${img})` }}>
+      <h3 className="title">{words}</h3>
     </div>
   );
 }
 
 const StyledCardBox = styled(CardBox)`
-  display: flex;
-  flex-direction: column;
+  height: 600px;
   color: ${({ theme }) => theme.colors.text};
-  margin: 0 auto;
-  padding: 0 15px;
-  .img {
-    height: 455px;
-    background-size: cover;
-    background-position: center center;
-  }
-  .desc {
-    padding: 50px;
-    background-color: ${({ theme }) => theme.colors.backgroundTwo};
-    p {
-      color: ${({ theme }) => theme.colors.text};
-      line-height: 1.8em;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  .title {
+    font-size: 2rem;
+    letter-spacing: 1rem;
+    text-align: center;
+    > span {
+      animation: ${Keyframes.colorAnimation} 4s linear infinite;
+      &.normal-word-1 {
+        --color-1: #df8453;
+        --color-2: #3d8dae;
+        --color-3: #e4a9a8;
+      }
+      &.normal-word-2 {
+        --color-1: #dbad4a;
+        --color-2: #accfcb;
+        --color-3: #17494d;
+      }
+      &.inverted-word-1 {
+        --color-1: #dbad4a;
+        --color-2: #accfcb;
+        --color-3: #17494d;
+      }
+      &.inverted-word-2 {
+        --color-1: #df8453;
+        --color-2: #3d8dae;
+        --color-3: #e4a9a8;
+      }
     }
   }
   ${largeBreakpoint(`
-    flex-direction: row;
-    width: ${Sizes.screenLargeMax}px;
-    margin: 0 auto;
-    .img, .desc {
-      width: 50%;
+    .title {
+      font-size: 10rem;
     }
   `)}
 `;

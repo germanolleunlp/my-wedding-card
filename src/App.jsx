@@ -12,8 +12,7 @@ import Hero from './Hero';
 import Welcome from './Welcome';
 import MobileMenu from './MobileMenu';
 import Menu from './Menu';
-import GroomCard from './GroomCard';
-import BrideCard from './BrideCard';
+import Us from './Us';
 import Timeline from './Timeline';
 import Gifts from './Gifts';
 import Countdown from './Countdown';
@@ -61,8 +60,7 @@ function App({ className }) {
           {isMediumSize ? <MobileMenu /> : <Menu />}
           <Hero />
           <Welcome />
-          <GroomCard />
-          <BrideCard />
+          <Us />
           <Countdown />
           <DressCode theme={theme} />
           <Timeline theme={theme} />

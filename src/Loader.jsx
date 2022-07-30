@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 import Colors from './Colors';
 import Keyframes from './Keyframes';
+
+const SIZE = 150;
 
 const Content = styled.div`
   display: block;
@@ -25,8 +25,8 @@ const Inner = styled.div`
 
 const Icon = styled.span`
   display: block;
-  width: 90px;
-  height: 90px;
+  width: ${SIZE}px;
+  height: ${SIZE}px;
   position: relative;
   font-size: 2rem;
   &:before {
@@ -36,18 +36,18 @@ const Icon = styled.span`
     position: absolute;
     left: 0;
     top: 0;
-    border: 5px solid ${Colors.lightgray};
-    border-top: 5px solid ${Colors.black};
+    border: 4px solid #b08f87;
+    border-top: 4px solid #5d433d;
     border-radius: 50%;
     animation: ${Keyframes.rotating} 1s linear infinite;
     box-sizing: border-box;
   }
-  & > svg {
+  & > img {
     position: absolute;
     left: 50%;
     top: 50%;
-    color: ${Colors.black};
     transform: translate(-50%, -50%);
+    width: ${SIZE}px;
   }
 `;
 
@@ -57,7 +57,7 @@ function Loader({ show, children }) {
       <Content>
         <Inner>
           <Icon>
-            <FontAwesomeIcon icon={solid('gem')} />
+            <img src="assets/logo.svg" alt="logo" />
           </Icon>
         </Inner>
       </Content>
