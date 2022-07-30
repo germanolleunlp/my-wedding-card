@@ -14,7 +14,8 @@ function Us({ className }) {
 
 const StyledUs = styled(Us)`
   display: flex;
-  gap: 1em;
+  flex-wrap: wrap;
+  gap: 1rem;
   > * {
     display: flex;
     align-items: center;
