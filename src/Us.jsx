@@ -6,8 +6,8 @@ import CardBox from './CardBox';
 function Us({ className }) {
   return (
     <section className={className}>
-      <CardBox img={Images.terraza1} key="groom" title="El novio" />
-      <CardBox img={Images.fiesta1} key="bride" title="La novia" inverted />
+      <CardBox img={Images.groom} key="groom" title="El novio" />
+      <CardBox img={Images.bride} key="bride" title="La novia" inverted />
     </section>
   );
 }

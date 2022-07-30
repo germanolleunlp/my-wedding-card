@@ -57,10 +57,14 @@ function Hero({ className }) {
         <SaveTheDate>
           <a
             target="_blank"
-            href="https://calendar.google.com/event?action=TEMPLATE&amp;tmeid=M2pxbzB0c2hiODM4MDA2azZzaThnMHRrb2ggMnZqam5wY3RwZmxqdnV2cXZvaGhmdWxsOWNAZw&amp;tmsrc=2vjjnpctpfljvuvqvohhfull9c%40group.calendar.google.com"
+            href="https://forms.gle/R7jJkZYRp1x5TQDi6"
             rel="noreferrer"
           >
-            <Title>Agenda la fecha</Title>
+            <Title>
+              Confirma tu
+              <br />
+              asistencia
+            </Title>
             <Date>08 OCT 2022</Date>
           </a>
         </SaveTheDate>
@@ -75,7 +79,7 @@ const StyledHero = styled(Hero)`
   height: calc(100vh - ${Sizes.menu}px);
   min-height: 700px;
   overflow: hidden;
-  background-image: url(${Images.bariloche2});
+  background-image: url(${Images.hero});
   background-size: cover;
   background-position: center center;
   &:before {

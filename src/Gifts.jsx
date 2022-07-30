@@ -23,7 +23,7 @@ const StyledGifts = styled(Gifts)`
   justify-content: center;
   text-align: center;
   min-height: 420px;
-  background-image: url(${Images.terraza2});
+  background-image: url(${Images.gifts});
   background-size: cover;
   background-position: center center;
   color: ${({ theme }) => theme.colors.textInverted};

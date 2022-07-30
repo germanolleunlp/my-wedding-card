@@ -18,7 +18,7 @@ const Content = styled.div`
   a {
     display: block;
     height: 50%;
-    padding-top: 20%;
+    padding-top: 15%;
     color: ${({ theme }) => theme.colors.text};
     letter-spacing: 4px;
   }

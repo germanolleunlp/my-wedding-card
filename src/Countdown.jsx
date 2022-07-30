@@ -44,7 +44,7 @@ const StyledCountdown = styled(Countdown)`
   justify-content: center;
   width: 100%;
   min-height: 400px;
-  background-image: url(${Images.terraza1});
+  background-image: url(${Images.countdown});
   background-attachment: fixed;
   background-position: top left;
   background-repeat: no-repeat;
