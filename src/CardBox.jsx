@@ -28,7 +28,7 @@ const StyledCardBox = styled(CardBox)`
   background-position: center center;
   background-repeat: no-repeat;
   .title {
-    font-size: 2rem;
+    font-size: 4rem;
     letter-spacing: 1rem;
     text-align: center;
     > span {
