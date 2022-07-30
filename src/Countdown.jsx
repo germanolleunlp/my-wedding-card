@@ -46,7 +46,7 @@ const StyledCountdown = styled(Countdown)`
   min-height: 400px;
   background-image: url(${Images.countdown});
   background-attachment: fixed;
-  background-position: top left;
+  background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   &:after {
