@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import styled, { ThemeProvider } from 'styled-components';
+import party from 'party-js';
 import { light, dark } from './themes';
 import useImages from './useImages';
 import useFonts from './useFonts';
@@ -38,6 +39,12 @@ function App({ className }) {
       });
     }
   }, [loading, location, active]);
+
+  useEffect(() => {
+    document.body.addEventListener('click', event => {
+      party.confetti(event);
+    });
+  }, []);
 
   const paddingTop = isMediumSize ? 0 : Sizes.menu;
 

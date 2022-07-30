@@ -3,13 +3,16 @@ import styled from 'styled-components';
 import { largeBreakpoint } from './Breakpoints';
 import Keyframes from './Keyframes';
 
-function CardBox({ className, img, title = '', inverted = false }) {
+function CardBox({ className, img, key, title = '', inverted = false }) {
   const prefix = inverted ? 'inverted' : 'normal';
-  const words = title
-    .split(' ')
-    .map((word, index) => (
-      <span className={`${prefix}-word-${index + 1}`}>{word}</span>
-    ));
+  const words = title.split(' ').map((word, index) => (
+    <span
+      key={`${key}-word-${index + 1}`}
+      className={`${prefix}-word-${index + 1}`}
+    >
+      {word}
+    </span>
+  ));
 
   return (
     <div className={className} style={{ backgroundImage: `url(${img})` }}>

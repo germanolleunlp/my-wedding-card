@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
+import party from 'party-js';
 import Colors from './Colors';
 import Sizes from './Sizes';
 import Images from './Images';
@@ -36,9 +37,22 @@ const Content = styled.div`
 `;
 
 function Hero({ className }) {
+  const ref = useRef();
+
+  useEffect(() => {
+    if (ref?.current) {
+      setTimeout(() => {
+        party.confetti(ref.current, {
+          count: 80,
+          size: 1.2
+        });
+      }, 700);
+    }
+  }, [ref?.current]);
+
   return (
     <section id="#/home" className={className}>
-      <Content>
+      <Content ref={ref}>
         <GettingMarried />
         <SaveTheDate>
           <a
