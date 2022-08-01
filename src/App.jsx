@@ -18,7 +18,7 @@ import Timeline from './Timeline';
 import Gifts from './Gifts';
 import Countdown from './Countdown';
 import DressCode from './DressCode';
-import Transportation from './Transportation';
+import Help from './Help';
 import ThemeButton from './ThemeButton';
 
 function App({ className }) {
@@ -73,7 +73,7 @@ function App({ className }) {
           <DressCode theme={theme} />
           <Timeline theme={theme} />
           <Gifts />
-          <Transportation />
+          <Help />
           <ThemeButton theme={theme} onClick={toggleTheme} />
         </Loader>
       </div>

@@ -4,16 +4,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 import Fonts from './Fonts';
 
-function Transportation({ className }) {
+function Help({ className }) {
   return (
-    <section className={className}>
-      <h3>Te dejamos informacion de Taxis y Remises</h3>
+    <section id="#/help" className={className}>
+      <h3>Telefonos</h3>
       <div className="boxes">
         <div className="box">
-          <h2>
+          <h4 className="title">
             <FontAwesomeIcon icon={solid('taxi')} />
             Taxis
-          </h2>
+          </h4>
           <ul>
             <li>Radio Taxi - (0341) 455-6666 / (0341) 438-2222</li>
             <li>Taxi Rosario - (0341) 456-6666 / (0341) 456-6639</li>
@@ -21,10 +21,10 @@ function Transportation({ className }) {
           </ul>
         </div>
         <div className="box">
-          <h2>
+          <h4 className="title">
             <FontAwesomeIcon icon={solid('car')} />
             Remises
-          </h2>
+          </h4>
           <ul>
             <li>Aguila Real - (0341) 435-1000 / (0341) 435-1103</li>
             <li>Primera Clase - (0341) 442-4300 / (0341) 443-7555</li>
@@ -32,11 +32,24 @@ function Transportation({ className }) {
           </ul>
         </div>
       </div>
+      <hr />
+      <h3>Como llegar</h3>
+      <div className="location">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/nfHeeYEG-LE"
+          title="Salones Puerto Norte"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
+      </div>
     </section>
   );
 }
 
-const StyledTransportation = styled(Transportation)`
+const StyledHelp = styled(Help)`
   margin: 0 1rem;
   color: ${({ theme }) => theme.colors.text};
   .boxes {
@@ -47,17 +60,20 @@ const StyledTransportation = styled(Transportation)`
     text-align: center;
     margin-bottom: 2rem;
   }
-  h3 {
+  .title {
     font-family: ${Fonts.secondary};
-    letter-spacing: 2px;
-    text-transform: uppercase;
     font-size: 1.5rem;
-    text-align: center;
+    margin: 0 0 1rem;
+    svg {
+      margin-right: 0.5rem;
+    }
   }
-  h2 {
+  h3 {
+    color: ${({ theme }) => theme.colors.text};
     font-family: ${Fonts.subtitle};
     font-size: 2rem;
-    margin: 0 0 1rem;
+    margin: 1rem;
+    text-align: center;
   }
   ul {
     display: flex;
@@ -77,6 +93,10 @@ const StyledTransportation = styled(Transportation)`
     font-family: ${Fonts.text};
     font-size: 1rem;
   }
+  .location {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
 `;
 
-export default StyledTransportation;
+export default StyledHelp;

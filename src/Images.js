@@ -1,7 +1,7 @@
 const IMAGES = {
   hero: 'assets/hero.jpg',
-  countdown: 'assets/placeholder.jpeg',
-  gifts: 'assets/placeholder.jpeg',
+  countdown: 'assets/countdown.jpeg',
+  gifts: 'assets/gifts.jpg',
   groom: 'assets/groom.jpg',
   bride: 'assets/bride.jpg',
   welcome: 'assets/welcome.jpg',
