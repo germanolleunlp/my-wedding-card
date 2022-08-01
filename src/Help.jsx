@@ -48,8 +48,8 @@ function Help({ className }) {
           </a>
         </p>
         <iframe
-          width="560"
-          height="315"
+          width="100%"
+          height="500"
           src="https://www.youtube.com/embed/nfHeeYEG-LE"
           title="Salones Puerto Norte"
           frameBorder="0"
