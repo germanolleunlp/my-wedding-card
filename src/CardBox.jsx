@@ -22,15 +22,16 @@ function CardBox({ className, img, key, title = '', inverted = false }) {
 }
 
 const StyledCardBox = styled(CardBox)`
-  height: 600px;
+  height: 320px;
   color: ${({ theme }) => theme.colors.text};
   background-size: cover;
-  background-position: center center;
+  background-position: top center;
   background-repeat: no-repeat;
   .title {
     font-size: 4rem;
     letter-spacing: 1rem;
     text-align: center;
+    margin: 0;
     > span {
       animation: ${Keyframes.colorAnimation} 4s linear infinite;
       &.normal-word-1 {
@@ -56,6 +57,7 @@ const StyledCardBox = styled(CardBox)`
     }
   }
   ${largeBreakpoint(`
+  height: 600px;
     .title {
       font-size: 10rem;
     }

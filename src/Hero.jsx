@@ -82,6 +82,7 @@ const StyledHero = styled(Hero)`
   background-image: url(${Images.hero});
   background-size: cover;
   background-position: center center;
+  background-repeat: no-repeat;
   &:before {
     content: '';
     position: absolute;

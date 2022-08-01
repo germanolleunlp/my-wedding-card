@@ -26,6 +26,7 @@ const StyledGifts = styled(Gifts)`
   background-image: url(${Images.gifts});
   background-size: cover;
   background-position: center center;
+  background-repeat: no-repeat;
   color: ${({ theme }) => theme.colors.textInverted};
   h3 {
     font-family: ${Fonts.secondary};

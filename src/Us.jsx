@@ -18,7 +18,7 @@ const StyledUs = styled(Us)`
   gap: 1rem;
   > * {
     display: flex;
-    align-items: center;
+    align-items: end;
     justify-content: center;
     flex: 1;
   }
