@@ -14,45 +14,60 @@ const MIN_SCROLLED_PERCENT = 25;
 const ITEMS = [
   {
     id: 'church',
-    date: '5:45pm - 8 OCT 22',
+    date: '17:30 hs',
     content: (
       <>
         <h3>Iglesia</h3>
-        <h4>Santa Fe, ROS</h4>
+        <h4>Basílica &quot;Nuestra Señora de Lourdes&quot;</h4>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi rhoncus
-          nisl non turpis efficitur, quis egestas nulla interdum. Aenean
-          tincidunt vel sapien sit amet pharetra.
+          Dirección:{' '}
+          <a
+            href="https://goo.gl/maps/Tw3AqYBBZ6k85SFz8"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Santiago 1169
+          </a>
         </p>
       </>
     )
   },
   {
     id: 'civil',
-    date: '5:45pm - 8 OCT 22',
+    date: 'Despues de la ceremonia religiosa',
     content: (
       <>
         <h3>Civil</h3>
-        <h4>Santa Fe, ROS</h4>
+        <h4>Salon &quot;Puerto Norte&quot;</h4>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi rhoncus
-          nisl non turpis efficitur, quis egestas nulla interdum. Aenean
-          tincidunt vel sapien sit amet pharetra.
+          Dirección:{' '}
+          <a
+            href="https://goo.gl/maps/pYf1XS3BTqnqLoqEA"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Av. Carballo 178
+          </a>
         </p>
       </>
     )
   },
   {
     id: 'salon',
-    date: '5:45pm - 8 OCT 22',
+    date: 'Concluido el civil',
     content: (
       <>
-        <h3>Salon</h3>
-        <h4>Santa Fe, ROS</h4>
+        <h3>Fiesta</h3>
+        <h4>Salon &quot;Puerto Norte&quot;</h4>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi rhoncus
-          nisl non turpis efficitur, quis egestas nulla interdum. Aenean
-          tincidunt vel sapien sit amet pharetra.
+          Dirección:{' '}
+          <a
+            href="https://goo.gl/maps/pYf1XS3BTqnqLoqEA"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Av. Carballo 178
+          </a>
         </p>
       </>
     )
@@ -160,6 +175,10 @@ function Timeline({ className, theme }) {
 
 const StyledTimeline = styled(Timeline)`
   margin: 1rem;
+  a {
+    color: inherit;
+    text-decoration: underline;
+  }
   .timeline-root {
     width: 100%;
   };

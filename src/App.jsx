@@ -19,6 +19,7 @@ import Gifts from './Gifts';
 import Countdown from './Countdown';
 import DressCode from './DressCode';
 import Help from './Help';
+import Places from './Places';
 import ThemeButton from './ThemeButton';
 
 function App({ className }) {
@@ -74,6 +75,7 @@ function App({ className }) {
           <Timeline theme={theme} />
           <Gifts />
           <Help />
+          <Places />
           <ThemeButton theme={theme} onClick={toggleTheme} />
         </Loader>
       </div>

@@ -19,14 +19,14 @@ function NamesBox({ className }) {
         &amp; Ger
       </h2>
       <div className="welcome">
-        <h3>Bienvenidos</h3>
         <FontAwesomeIcon icon={solid('grip-lines-vertical')} />
         <p>
           El 08.10.22 será un día muy importante para nosotros, celebrar tantos
+          años de amor no sería lo mismo sin ustedes.
           <br />
-          años de amor no sería lo mismo sin ustedes. Los esperamos para
           <br />
-          festejar juntos nuestra historia, gracias por ser parte.
+          Los esperamos para festejar juntos nuestra historia, gracias por ser
+          parte.
         </p>
       </div>
     </section>

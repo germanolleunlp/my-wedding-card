@@ -7,7 +7,6 @@ import Colors from './Colors';
 function Gifts({ className }) {
   return (
     <section id="#/gifts" className={className}>
-      <h3>Obsequios</h3>
       <h2>Si tienen un regalo en mente...</h2>
       <p>
         Numero de CBU: XXXXXXXXXXXXXXXXXXXXXX
@@ -38,14 +37,6 @@ const StyledGifts = styled(Gifts)`
     height: 100%;
     left: 0;
     top: 0;
-  }
-  h3 {
-    font-family: ${Fonts.secondary};
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    font-size: 1.5rem;
-    margin: 0 0 1rem;
-    z-index: 1;
   }
   h2 {
     font-family: ${Fonts.subtitle};

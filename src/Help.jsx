@@ -52,7 +52,6 @@ function Help({ className }) {
       </div>
       <h3>Como llegar</h3>
       <div className="location">
-        <h4 className="title">¿No sabes como llegar al salón?</h4>
         <p>
           Esta ubicado en AV. CARBALLO 178, o podes usar este link para saber
           como llegar:
@@ -128,7 +127,7 @@ const StyledHelp = styled(Help)`
   }
   .location {
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
   p {
     font-family: ${Fonts.subtitle};

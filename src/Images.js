@@ -1,6 +1,6 @@
 const IMAGES = {
   hero: 'assets/hero.jpg',
-  countdown: 'assets/countdown.jpeg',
+  countdown: 'assets/countdown.jpg',
   gifts: 'assets/gifts.jpg',
   groom: 'assets/groom.jpg',
   bride: 'assets/bride.jpg',
