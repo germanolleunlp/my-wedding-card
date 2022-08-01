@@ -42,10 +42,7 @@ function Hero({ className }) {
   useEffect(() => {
     if (ref?.current) {
       setTimeout(() => {
-        party.confetti(ref.current, {
-          count: 80,
-          size: 1.2
-        });
+        party.confetti(ref.current);
       }, 700);
     }
   }, [ref?.current]);
