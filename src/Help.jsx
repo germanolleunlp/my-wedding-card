@@ -32,9 +32,21 @@ function Help({ className }) {
           </ul>
         </div>
       </div>
-      <hr />
       <h3>Como llegar</h3>
       <div className="location">
+        <h4 className="title">¿No sabes como llegar al salón?</h4>
+        <p>
+          Esta ubicado en AV. CARBALLO 178, o podes usar este link para saber
+          como llegar:
+          <br />
+          <a
+            href="https://goo.gl/maps/pYf1XS3BTqnqLoqEA"
+            target="_blank"
+            rel="noreferrer"
+          >
+            https://goo.gl/maps/pYf1XS3BTqnqLoqEA
+          </a>
+        </p>
         <iframe
           width="560"
           height="315"
@@ -96,6 +108,9 @@ const StyledHelp = styled(Help)`
   .location {
     text-align: center;
     margin-bottom: 2rem;
+  }
+  p {
+    font-family: ${Fonts.subtitle};
   }
 `;
 
