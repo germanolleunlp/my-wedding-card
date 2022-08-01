@@ -41,7 +41,7 @@ const StyledNamesBox = styled(NamesBox)`
     margin: 0;
     text-align: center;
     background-image: url(${Images.welcome});
-    background-size: contain;
+    background-size: cover;
     background-position: center center;
     background-attachment: fixed;
     background-clip: text;
