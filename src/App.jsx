@@ -22,14 +22,14 @@ import Help from './Help';
 import ThemeButton from './ThemeButton';
 
 function App({ className }) {
+  useFonts();
   const loading = useImages();
-  const active = useFonts();
   const location = useLocation();
   const isMediumSize = useSize(Sizes.screenMediumMax);
   const [theme, setTheme] = useState(light);
 
   useEffect(() => {
-    if (!loading && location?.pathname && active) {
+    if (!loading && location?.pathname) {
       const element = document.getElementById(`#${location.pathname}`);
       const offsetTop = element?.offsetTop || 0;
       const top = offsetTop - (isMediumSize ? 0 : Sizes.menu);
@@ -39,7 +39,7 @@ function App({ className }) {
         behavior: 'smooth'
       });
     }
-  }, [loading, location, active]);
+  }, [loading, location]);
 
   useEffect(() => {
     document.body.addEventListener('click', event => {
@@ -64,7 +64,7 @@ function App({ className }) {
         className={className}
         style={{ paddingTop, backgroundColor: theme.colors.backgroundOne }}
       >
-        <Loader show={loading || !active}>
+        <Loader show={loading}>
           {isMediumSize ? <MobileMenu /> : <Menu />}
           <Hero />
           <Welcome />
