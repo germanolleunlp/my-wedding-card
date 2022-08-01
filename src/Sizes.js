@@ -4,7 +4,7 @@ const SIZES = {
   saveTheDateMedium: 300,
   saveTheDateSmall: 270,
   screenLargeMax: 1170,
-  screenMediumMax: 768,
+  screenMediumMax: 900,
   screenSmallMax: 360
 };
 

@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { HashRouter, Routes, Route } from 'react-router-dom';
 import smoothscroll from 'smoothscroll-polyfill';
 import './index.css';
 import App from './App';
@@ -11,11 +10,7 @@ smoothscroll.polyfill();
 
 ReactDOM.render(
   <React.StrictMode>
-    <HashRouter>
-      <Routes>
-        <Route path="*" element={<App />} />
-      </Routes>
-    </HashRouter>
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );

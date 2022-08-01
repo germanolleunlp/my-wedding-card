@@ -3,7 +3,8 @@ const MENU_ITEMS = [
   { href: '/us', text: 'Nosotros' },
   { href: '/timeline', text: 'Eventos' },
   { href: '/gifts', text: 'Regalos' },
-  { href: '/help', text: 'Ayuda' },
+  { href: '/driving', text: 'Como llegar' },
+  { href: '/phones', text: 'Taxis/Remises' },
   { href: '/housing', text: 'Hospejade' }
 ];
 

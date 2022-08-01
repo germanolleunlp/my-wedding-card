@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import styled, { ThemeProvider } from 'styled-components';
 import party from 'party-js';
 import { light, dark } from './themes';
@@ -9,38 +9,19 @@ import useSize from './useSize';
 import Fonts from './Fonts';
 import Sizes from './Sizes';
 import Loader from './Loader';
-import Hero from './Hero';
-import Welcome from './Welcome';
 import MobileMenu from './MobileMenu';
 import Menu from './Menu';
-import Us from './Us';
-import Timeline from './Timeline';
-import Gifts from './Gifts';
-import Countdown from './Countdown';
-import DressCode from './DressCode';
-import Help from './Help';
-import Places from './Places';
+import Home from './Home';
+import Phones from './Phones';
+import Driving from './Driving';
+import Housing from './Housing';
 import ThemeButton from './ThemeButton';
 
 function App({ className }) {
   useFonts();
   const loading = useImages();
-  const location = useLocation();
   const isMediumSize = useSize(Sizes.screenMediumMax);
   const [theme, setTheme] = useState(light);
-
-  useEffect(() => {
-    if (!loading && location?.pathname) {
-      const element = document.getElementById(`#${location.pathname}`);
-      const offsetTop = element?.offsetTop || 0;
-      const top = offsetTop - (isMediumSize ? 0 : Sizes.menu);
-      window.scrollTo({
-        top,
-        left: 0,
-        behavior: 'smooth'
-      });
-    }
-  }, [loading, location]);
 
   useEffect(() => {
     document.body.addEventListener('click', event => {
@@ -60,26 +41,25 @@ function App({ className }) {
   };
 
   return (
-    <ThemeProvider theme={theme}>
-      <div
-        className={className}
-        style={{ paddingTop, backgroundColor: theme.colors.backgroundOne }}
-      >
-        <Loader show={loading}>
-          {isMediumSize ? <MobileMenu /> : <Menu />}
-          <Hero />
-          <Welcome />
-          <Us />
-          <Countdown />
-          <DressCode theme={theme} />
-          <Timeline theme={theme} />
-          <Gifts />
-          <Help />
-          <Places />
-          <ThemeButton theme={theme} onClick={toggleTheme} />
-        </Loader>
-      </div>
-    </ThemeProvider>
+    <HashRouter>
+      <ThemeProvider theme={theme}>
+        <div
+          className={className}
+          style={{ paddingTop, backgroundColor: theme.colors.backgroundOne }}
+        >
+          <Loader show={loading}>
+            {isMediumSize ? <MobileMenu /> : <Menu />}
+            <Routes>
+              <Route path="/phones" element={<Phones />} />
+              <Route path="/driving" element={<Driving />} />
+              <Route path="/housing" element={<Housing />} />
+              <Route path="*" element={<Home theme={theme} />} />
+            </Routes>
+            <ThemeButton theme={theme} onClick={toggleTheme} />
+          </Loader>
+        </div>
+      </ThemeProvider>
+    </HashRouter>
   );
 }
 
