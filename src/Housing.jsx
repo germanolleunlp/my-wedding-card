@@ -50,7 +50,7 @@ const StyledHousing = styled(Housing)`
   h3 {
     color: ${({ theme }) => theme.colors.text};
     font-family: ${Fonts.subtitle};
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin: 1rem;
   }
 `;

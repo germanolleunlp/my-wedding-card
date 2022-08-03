@@ -7,11 +7,13 @@ import Colors from './Colors';
 function Gifts({ className }) {
   return (
     <section id="#/gifts" className={className}>
-      <h2>Si tienen un regalo en mente...</h2>
+      <h2>Si queres hacernos un regalo</h2>
       <p>
-        Numero de CBU: XXXXXXXXXXXXXXXXXXXXXX
+        Nombre: Dutto Sergio Daniel
         <br />
-        Alias de CBU: alias-alias-alias
+        Banco: Banco Macro
+        <br />
+        CBU: 2850721940094783455768
       </p>
     </section>
   );
@@ -40,7 +42,7 @@ const StyledGifts = styled(Gifts)`
   }
   h2 {
     font-family: ${Fonts.subtitle};
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin: 0 0 1rem;
     z-index: 1;
   }
@@ -49,6 +51,7 @@ const StyledGifts = styled(Gifts)`
     font-size: 1rem;
     margin: 0;
     z-index: 1;
+    line-height: 2rem;
   }
 `;
 

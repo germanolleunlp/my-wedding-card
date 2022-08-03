@@ -8,6 +8,10 @@ function Phones({ className }) {
   return (
     <section id="#/help" className={className}>
       <h3>Telefonos</h3>
+      <p>
+        Te dejamos algunos telefonos de taxis y remises para que disfrutes al
+        maximo.
+      </p>
       <div className="boxes">
         <div className="box">
           <h4 className="title">
@@ -49,6 +53,32 @@ function Phones({ className }) {
             </li>
           </ul>
         </div>
+        <div className="box">
+          <h4 className="title">
+            <FontAwesomeIcon icon={solid('mobile-screen-button')} />
+            Aplicaciones
+          </h4>
+          <ul>
+            <li>
+              <a
+                href="https://shetaxi.com.ar/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                She Taxi
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.movitaxi.com.ar/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Movi Taxi
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
   );
@@ -57,12 +87,12 @@ function Phones({ className }) {
 const StyledPhones = styled(Phones)`
   margin: 0 1rem;
   color: ${({ theme }) => theme.colors.text};
+  text-align: center;
   .boxes {
     display: flex;
     flex-direction: column;
   }
   .box {
-    text-align: center;
     margin-bottom: 2rem;
   }
   .title {
@@ -76,9 +106,8 @@ const StyledPhones = styled(Phones)`
   h3 {
     color: ${({ theme }) => theme.colors.text};
     font-family: ${Fonts.subtitle};
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin: 1rem;
-    text-align: center;
   }
   ul {
     display: flex;

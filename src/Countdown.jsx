@@ -58,7 +58,7 @@ const StyledCountdown = styled(Countdown)`
   }
   h3 {
     color: ${({ theme }) => theme.colors.textInverted};
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     margin: 1rem;
     z-index: 2;
   }

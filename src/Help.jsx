@@ -40,13 +40,13 @@ const StyledHelp = styled(Help)`
   h3 {
     color: ${({ theme }) => theme.colors.text};
     font-family: ${Fonts.subtitle};
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin: 1rem;
     text-align: center;
   }
   h4 {
     font-family: ${Fonts.subtitle};
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin: 0;
   }
   p {
