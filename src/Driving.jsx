@@ -36,13 +36,12 @@ const StyledDriving = styled(Driving)`
   h3 {
     color: ${({ theme }) => theme.colors.text};
     font-family: ${Fonts.subtitle};
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin: 1rem;
   }
   p {
-    font-family: ${Fonts.secondary};
-    font-size: 1.5rem;
-    margin: 0 0 1rem;
+    font-family: ${Fonts.subtitle};
+    word-break: break-all;
   }
   a {
     display: block;
