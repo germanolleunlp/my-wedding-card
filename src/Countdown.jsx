@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Images from './Images';
 import Fonts from './Fonts';
+import Colors from './Colors';
 import useCountdown from './useCountdown';
 
 const START_DATE = 'October 8 2022 18:00';
@@ -59,7 +60,7 @@ const StyledCountdown = styled(Countdown)`
     height: 100%;
   }
   h3 {
-    color: ${({ theme }) => theme.colors.text};
+    color: ${Colors.white};
     font-size: 2rem;
     margin: 1rem;
     z-index: 2;
