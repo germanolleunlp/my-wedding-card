@@ -77,9 +77,9 @@ const StyledHero = styled(Hero)`
   min-height: 700px;
   overflow: hidden;
   background-image: url(${Images.hero});
-  background-size: cover;
+  background-size: auto;
   background-position: center center;
-  background-repeat: no-repeat;
+  background-repeat: repeat-x;
   &:before {
     content: '';
     position: absolute;
