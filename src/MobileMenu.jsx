@@ -63,4 +63,4 @@ const StyledMobileMenu = styled(MobileMenu)`
   }
 `;
 
-export default React.memo(StyledMobileMenu);
+export default StyledMobileMenu;

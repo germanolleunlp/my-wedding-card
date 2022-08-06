@@ -58,4 +58,4 @@ const StyledMenu = styled(Menu)`
   `)}
 `;
 
-export default React.memo(StyledMenu);
+export default StyledMenu;

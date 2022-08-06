@@ -87,4 +87,4 @@ const StyledNamesBox = styled(NamesBox)`
   }
 `;
 
-export default React.memo(StyledNamesBox);
+export default StyledNamesBox;

@@ -55,4 +55,4 @@ const StyledGifts = styled(Gifts)`
   }
 `;
 
-export default React.memo(StyledGifts);
+export default StyledGifts;

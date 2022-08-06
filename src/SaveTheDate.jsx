@@ -63,4 +63,4 @@ function SaveTheDate({ className, children }) {
   return <Content className={className}>{children}</Content>;
 }
 
-export default React.memo(SaveTheDate);
+export default SaveTheDate;

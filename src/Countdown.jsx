@@ -90,4 +90,4 @@ const StyledCountdown = styled(Countdown)`
   }
 `;
 
-export default React.memo(StyledCountdown);
+export default StyledCountdown;

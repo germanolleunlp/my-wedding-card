@@ -104,4 +104,4 @@ function GettingMarried() {
   );
 }
 
-export default React.memo(GettingMarried);
+export default GettingMarried;

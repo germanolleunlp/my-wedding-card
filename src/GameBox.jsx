@@ -32,4 +32,4 @@ const StyledGameBox = styled(GameBox)`
   background-color: ${Colors.black};
 `;
 
-export default React.memo(StyledGameBox);
+export default StyledGameBox;
