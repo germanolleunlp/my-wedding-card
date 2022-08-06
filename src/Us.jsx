@@ -19,6 +19,7 @@ const StyledUs = styled(Us)`
   background-color: ${({ theme }) => theme.colors.backgroundTwo};
   .content {
     display: flex;
+    flex-wrap: wrap;
     max-width: ${Sizes.screenLargeMax}px;
     margin: 0 auto;
     > * {
