@@ -39,7 +39,7 @@ function Countdown({ className }) {
 
 const StyledCountdown = styled(Countdown)`
   text-align: center;
-  margin: 2rem 0;
+  margin: 1rem 0;
   position: relative;
   display: inline-flex;
   flex-direction: column;

@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Images from './Images';
 import CardBox from './CardBox';
+import Sizes from './Sizes';
 
 function Us({ className }) {
   return (
@@ -16,6 +17,8 @@ const StyledUs = styled(Us)`
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  max-width: ${Sizes.screenLargeMax}px;
+  margin: 0 auto;
   > * {
     display: flex;
     align-items: end;

@@ -27,6 +27,7 @@ const StyledCardBox = styled(CardBox)`
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
+  border-radius: 4px;
   .title {
     font-size: 4rem;
     letter-spacing: 1rem;
