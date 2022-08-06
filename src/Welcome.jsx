@@ -36,7 +36,6 @@ function NamesBox({ className }) {
 const StyledNamesBox = styled(NamesBox)`
   background-color: ${({ theme }) => theme.colors.backgroundTwo};
   padding: 20px 0;
-  margin-bottom: 1rem;
   .names {
     margin: 0;
     text-align: center;

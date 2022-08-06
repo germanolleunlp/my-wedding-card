@@ -25,7 +25,7 @@ const StyledCardBox = styled(CardBox)`
   height: 320px;
   color: ${({ theme }) => theme.colors.text};
   background-size: cover;
-  background-position: top center;
+  background-position: center;
   background-repeat: no-repeat;
   border-radius: 4px;
   .title {
