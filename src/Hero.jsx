@@ -75,6 +75,7 @@ const StyledHero = styled(Hero)`
   position: relative;
   height: calc(100vh - ${Sizes.menu}px);
   min-height: 700px;
+  max-height: 1024px;
   overflow: hidden;
   background-image: url(${Images.hero});
   background-size: auto;
