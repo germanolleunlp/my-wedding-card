@@ -4,8 +4,10 @@ import Images from './Images';
 import Fonts from './Fonts';
 import useCountdown from './useCountdown';
 
+const START_DATE = 'October 8 2022 18:00';
+
 function Countdown({ className }) {
-  const countdown = useCountdown('2022-10-08');
+  const countdown = useCountdown(START_DATE);
 
   return (
     <section id="#/countdown" className={className}>

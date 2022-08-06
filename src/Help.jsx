@@ -35,7 +35,7 @@ function Help({ className }) {
 
 const StyledHelp = styled(Help)`
   text-align: center;
-  margin-bottom: 1rem;
+  padding-bottom: 1rem;
   color: ${({ theme }) => theme.colors.text};
   h3 {
     color: ${({ theme }) => theme.colors.text};

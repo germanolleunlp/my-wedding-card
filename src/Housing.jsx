@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 import Fonts from './Fonts';
+import Sizes from './Sizes';
+import { smallBreakpoint } from './Breakpoints';
 
 function Housing({ className }) {
   return (
@@ -150,9 +152,14 @@ function Housing({ className }) {
 }
 
 const StyledHousing = styled(Housing)`
-  margin: 0 1rem;
+  padding: 0 1rem;
   color: ${({ theme }) => theme.colors.text};
   text-align: center;
+  height: calc(100vh - ${Sizes.menu}px);
+  padding-top: 1rem;
+  ${smallBreakpoint(`
+    height: 100vh;
+  `)}
   .boxes {
     display: flex;
     flex-direction: column;
@@ -172,7 +179,7 @@ const StyledHousing = styled(Housing)`
     color: ${({ theme }) => theme.colors.text};
     font-family: ${Fonts.subtitle};
     font-size: 1.5rem;
-    margin: 1rem;
+    margin: 0 0 1rem;
   }
   ul {
     display: flex;

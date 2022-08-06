@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import Fonts from './Fonts';
+import Sizes from './Sizes';
+import { smallBreakpoint } from './Breakpoints';
 
 function Driving({ className }) {
   return (
@@ -31,19 +33,28 @@ function Driving({ className }) {
 }
 
 const StyledDriving = styled(Driving)`
-  margin: 1rem;
+  padding: 0 1rem;
+  color: ${({ theme }) => theme.colors.text};
   text-align: center;
+  height: calc(100vh - ${Sizes.menu}px);
+  padding-top: 1rem;
+  ${smallBreakpoint(`
+    height: 100vh;
+  `)}
   h3 {
     color: ${({ theme }) => theme.colors.text};
     font-family: ${Fonts.subtitle};
     font-size: 1.5rem;
-    margin: 1rem;
+    margin: 0 0 1rem;
   }
   p {
+    color: ${({ theme }) => theme.colors.text};
     font-family: ${Fonts.subtitle};
     word-break: break-all;
   }
   a {
+    color: ${({ theme }) => theme.colors.text};
+    text-decoration: underline;
     display: block;
     margin: 1rem;
   }

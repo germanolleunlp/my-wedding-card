@@ -80,6 +80,9 @@ const StyledHero = styled(Hero)`
   background-size: auto;
   background-position: center center;
   background-repeat: repeat-x;
+  ${smallBreakpoint(`
+    background-size: cover;
+  `)}
   &:before {
     content: '';
     position: absolute;

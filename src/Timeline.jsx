@@ -14,7 +14,7 @@ const MIN_SCROLLED_PERCENT = 25;
 const ITEMS = [
   {
     id: 'church',
-    date: '17:30 hs',
+    date: '17:45 hs',
     content: (
       <>
         <h3>Iglesia</h3>
