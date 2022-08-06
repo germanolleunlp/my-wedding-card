@@ -30,7 +30,7 @@ const StyledGifts = styled(Gifts)`
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  color: ${({ theme }) => theme.colors.textInverted};
+  color: ${({ theme }) => theme.colors.text};
   &:before {
     content: '';
     position: absolute;
