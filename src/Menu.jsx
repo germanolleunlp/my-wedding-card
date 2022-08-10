@@ -26,6 +26,7 @@ const StyledMenu = styled(Menu)`
   height: ${Sizes.menu}px;
   top: 0;
   background-color: ${({ theme }) => theme.colors.backgroundOne};
+  font-size: 0.75rem;
   z-index: 50;
   ul {
     display: flex;

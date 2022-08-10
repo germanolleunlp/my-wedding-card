@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 import Images from './Images';
 import Fonts from './Fonts';
+import Colors from './Colors';
 import { smallBreakpoint, mediumBreakpoint } from './Breakpoints';
 
 function NamesBox({ className }) {
@@ -28,6 +29,14 @@ function NamesBox({ className }) {
           Los esperamos para festejar juntos nuestra historia, gracias por ser
           parte.
         </p>
+        <a
+          className="link"
+          target="_blank"
+          href="https://forms.gle/R7jJkZYRp1x5TQDi6"
+          rel="noreferrer"
+        >
+          Confirma tu asistencia
+        </a>
       </div>
     </section>
   );
@@ -83,6 +92,16 @@ const StyledNamesBox = styled(NamesBox)`
       font-size: 1rem;
       margin: 1rem 0;
     }
+  }
+  .link {
+    display: inline-block;
+    color: ${Colors.white};
+    background: ${Colors.black};
+    text-decoration: none;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+    font-size: 1.5rem;
   }
 `;
 

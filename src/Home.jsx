@@ -9,6 +9,7 @@ import Gifts from './Gifts';
 import Countdown from './Countdown';
 import DressCode from './DressCode';
 import Help from './Help';
+import Confirm from './Confirm';
 import Sizes from './Sizes';
 
 function Home({ loading, theme }) {
@@ -36,6 +37,7 @@ function Home({ loading, theme }) {
       <Countdown />
       <DressCode theme={theme} />
       <Timeline theme={theme} />
+      <Confirm />
       <Gifts />
       <Help />
     </>
