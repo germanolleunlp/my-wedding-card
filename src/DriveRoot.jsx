@@ -31,7 +31,7 @@ function DriveRoot() {
     if (ref?.current && isReady) {
       const grid = new JustifiedGrid(ref.current, {
         defaultDirection: 'end',
-        gap: 5,
+        gap: 2,
         rowRange: 0,
         columnRange: [1, 8],
         sizeRange: [200, 1000],
