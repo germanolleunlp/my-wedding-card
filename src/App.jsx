@@ -54,7 +54,7 @@ function App({ className }) {
               <Route path="/phones" element={<Phones />} />
               <Route path="/driving" element={<Driving />} />
               <Route path="/housing" element={<Housing />} />
-              <Route path="/drive" element={<DriveRoot />} />
+              <Route path="/fotos" element={<DriveRoot />} />
               <Route path="*" element={<Home theme={theme} />} />
             </Routes>
             <ThemeButton theme={theme} onClick={toggleTheme} />

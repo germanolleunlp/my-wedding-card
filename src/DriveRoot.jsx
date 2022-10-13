@@ -53,7 +53,7 @@ function DriveRoot() {
 
   return (
     <Loader show={!renderCompleted} inBackground>
-      <div ref={ref}>
+      <div id="#/fotos" ref={ref}>
         {folders.map(({ id }) => (
           <DriveFolder key={id} id={id} onLoaded={onLoaded} />
         ))}
