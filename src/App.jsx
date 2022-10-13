@@ -15,6 +15,7 @@ import Home from './Home';
 import Phones from './Phones';
 import Driving from './Driving';
 import Housing from './Housing';
+import DriveRoot from './DriveRoot';
 import ThemeButton from './ThemeButton';
 
 function App({ className }) {
@@ -53,6 +54,7 @@ function App({ className }) {
               <Route path="/phones" element={<Phones />} />
               <Route path="/driving" element={<Driving />} />
               <Route path="/housing" element={<Housing />} />
+              <Route path="/drive" element={<DriveRoot />} />
               <Route path="*" element={<Home theme={theme} />} />
             </Routes>
             <ThemeButton theme={theme} onClick={toggleTheme} />

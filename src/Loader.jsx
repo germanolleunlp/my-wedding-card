@@ -51,17 +51,30 @@ const Icon = styled.span`
   }
 `;
 
-function Loader({ show, children }) {
-  if (show) {
+function Spinner() {
+  return (
+    <Content>
+      <Inner>
+        <Icon>
+          <img src="assets/logo.svg" alt="logo" />
+        </Icon>
+      </Inner>
+    </Content>
+  );
+}
+
+function Loader({ show, children, inBackground = false }) {
+  if (inBackground) {
     return (
-      <Content>
-        <Inner>
-          <Icon>
-            <img src="assets/logo.svg" alt="logo" />
-          </Icon>
-        </Inner>
-      </Content>
+      <>
+        {show && <Spinner />}
+        <div>{children}</div>
+      </>
     );
+  }
+
+  if (show) {
+    return <Spinner />;
   }
 
   return children;
